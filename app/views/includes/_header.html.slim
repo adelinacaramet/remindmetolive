@@ -1,0 +1,53 @@
+header
+  .navbar
+    .navbar-header
+      .container
+        
+        ul.info.pull-left
+          li
+            a href="#" 
+              i.icon-mail-1.contact
+              | info@persa.photo
+          li
+            i.icon-mobile.contact
+            | +49 (123) 456 78 90
+        
+        ul.social.pull-right
+          li
+            a href="#" 
+              i.icon-s-facebook
+          li
+            a href="#" 
+              i.icon-s-gplus
+          li
+            a href="#" 
+              i.icon-s-twitter
+          li
+            a href="#" 
+              i.icon-s-pinterest
+          li
+            a href="#" 
+              i.icon-s-behance
+          li
+            a href="#" 
+              i.icon-s-dribbble
+        
+        / ============================================================= LOGO MOBILE ============================================================= -->
+        
+        a.navbar-brand href="/" 
+          img.logo alt="" src="/assets/logo.svg" /
+        /! ============================================================= LOGO MOBILE : END =============================================================
+        a.btn.responsive-menu.pull-right data-target=".navbar-collapse" data-toggle="collapse" 
+          i.icon-menu-1
+
+    .yamm
+      .navbar-collapse.collapse
+        .container
+          /! ============================================================= LOGO =============================================================
+          a.navbar-brand href="/" 
+            img.logo alt="" src="/assets/logo.svg" /
+          /! ============================================================= LOGO : END =============================================================
+          /! ============================================================= MAIN NAVIGATION =============================================================
+          = render 'includes/navigation'
+          /! ============================================================= MAIN NAVIGATION : END =============================================================
+

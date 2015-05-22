@@ -1,0 +1,184 @@
+section#portfolio
+  .container.inner
+    .row
+      .col-md-8.col-sm-9.center-block.text-center
+        header
+          h1 Best Visual Stories in the World
+          p Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.
+
+  .container.inner-bottom
+    .row
+      .col-sm-12.portfolio
+        ul.filter.text-center
+          li
+            a.active data-filter="*" href="#"  All
+          li
+            a data-filter=".identity" href="#"  Identity
+          li
+            a data-filter=".interactive" href="#"  Interactive
+          li
+            a data-filter=".print" href="#"  Print
+          li
+            a data-filter=".photography" href="#"  Photography
+        ul.items.col-3.gap
+          - for story_meta in @story_metas do
+            li.item.thumb.interactive
+              figure
+                .icon-overlay.icn-link
+                  a href="#{story_meta.url}" 
+                    img alt="" src="#{story_meta.picture_url}" /
+                figcaption.bordered.no-top-border
+                  .info
+                    h4
+                      a href="#{story_meta.url}"  #{story_meta.title}
+                    p Interactive
+          li.item.thumb.interactive
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work01.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Appscreen Dashboard
+                  p Interactive
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work02.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Grand Motel
+                  p Identity
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work16.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Signwall
+                  p Identity
+          li.item.thumb.print
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work18.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Modern CD Case
+                  p Print
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work09.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Astor & Yancy
+                  p Identity
+          li.item.thumb.photography
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/photograph02.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Daydreaming
+                  p Photography
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work08a.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Brand Stationery
+                  p Identity
+          li.item.thumb.print
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work10.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Tri Fold Brochure
+                  p Print
+          li.item.thumb.interactive
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work03.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Vintage Bicycles
+                  p Interactive
+          li.item.thumb.print
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work20.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Electric Dance Book Cover
+                  p Print
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work05.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Embroidered
+                  p Identity
+          li.item.thumb.identity.print
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work21.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Brand Stationery
+                  p Identity/Print
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work17.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Handmade Wood Gifts
+                  p Identity
+          li.item.thumb.identity
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work19.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Designer Brand
+                  p Identity
+          li.item.thumb.print
+            figure
+              .icon-overlay.icn-link
+                a href="portfolio-post.html" 
+                  img alt="" src="assets/images/art/work07.jpg" /
+              figcaption.bordered.no-top-border
+                .info
+                  h4
+                    a href="portfolio-post.html"  Vinyl Records
+                  p Print

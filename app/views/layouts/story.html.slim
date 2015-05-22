@@ -1,0 +1,160 @@
+= content_for :content do
+  section#portfolio-post
+    = content_for?(:story_content) ? yield(:story_content) : yield
+  /! ============================================================= SECTION – MORE WORKS =============================================================
+  section#more-works
+    .container.inner-top-md.inner-bottom
+      .row
+        .col-sm-12
+          #accordion.panel-group.blank
+            .panel.panel-default
+              .panel-heading.text-center
+                h4.panel-title
+                  a.panel-toggle.collapsed data-parent="#accordion" data-toggle="collapse" href="#content" 
+                    span More stories
+              #content.panel-collapse.collapse.in
+                .panel-body
+                  .portfolio
+                    ul.filter.text-center
+                      li
+                        a.active data-filter="*" href="#"  All
+                      li
+                        a data-filter=".identity" href="#"  Identity
+                      li
+                        a data-filter=".interactive" href="#"  Interactive
+                      li
+                        a data-filter=".print" href="#"  Print
+                      li
+                        a data-filter=".photography" href="#"  Photography
+                    ul.items.col-4
+                      li.item.thumb.interactive
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Appscreen Dashboard
+                                p Interactive
+                            img alt="" src="assets/images/art/work01.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Grand Motel
+                                p Identity
+                            img alt="" src="assets/images/art/work02.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Signwall
+                                p Identity
+                            img alt="" src="assets/images/art/work16.jpg" /
+                      li.item.thumb.print
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Modern CD Case
+                                p Print
+                            img alt="" src="assets/images/art/work18.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Astor & Yancy
+                                p Identity
+                            img alt="" src="assets/images/art/work09.jpg" /
+                      li.item.thumb.photography
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Daydreaming
+                                p Photography
+                            img alt="" src="assets/images/art/photograph02.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Brand Stationery
+                                p Identity
+                            img alt="" src="assets/images/art/work08a.jpg" /
+                      li.item.thumb.print
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Tri Fold Brochure
+                                p Print
+                            img alt="" src="assets/images/art/work10.jpg" /
+                      li.item.thumb.interactive
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Vintage Bicycles
+                                p Interactive
+                            img alt="" src="assets/images/art/work03.jpg" /
+                      li.item.thumb.print
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Electric Dance Book Cover
+                                p Print
+                            img alt="" src="assets/images/art/work20.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Embroidered
+                                p Identity
+                            img alt="" src="assets/images/art/work05.jpg" /
+                      li.item.thumb.identity.print
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Brand Stationery
+                                p Identity/Print
+                            img alt="" src="assets/images/art/work21.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Handmade Wood Gifts
+                                p Identity
+                            img alt="" src="assets/images/art/work17.jpg" /
+                      li.item.thumb.identity
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Designer Brand
+                                p Identity
+                            img alt="" src="assets/images/art/work19.jpg" /
+                      li.item.thumb.print
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Vinyl Records
+                                p Print
+                            img alt="" src="assets/images/art/work07.jpg" /
+                      li.item.thumb.interactive
+                        a href="portfolio-post.html" 
+                          figure
+                            figcaption.text-overlay
+                              .info
+                                h4 Elena Website
+                                p Interactive
+                            img alt="" src="assets/images/art/work22.jpg" /
+  /! ============================================================= SECTION – MORE WORKS : END =============================================================
+
+= render template: 'layouts/application'

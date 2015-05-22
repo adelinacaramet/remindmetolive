@@ -1,0 +1,70 @@
+
+/! ============================================================= SECTION – CONTACT FORM =============================================================
+section#contact-form
+  .container.inner
+    .row
+      .col-md-8.col-sm-9.center-block.text-center
+        header
+          h1 Get in touch
+          p Do you want to know more? We’d love to hear from you!
+    
+    .row
+      .col-sm-12
+        .row
+          .col-sm-6.outer-top-md.inner-right-sm
+            h2 Leave a Message
+            form#contactform.forms action="contact.php" method="post" 
+              .row
+                .col-sm-6
+                  input.form-control name="name" placeholder=("Name (Required)") type="text" /
+              .row
+                .col-sm-6
+                  input.form-control name="email" placeholder=("Email (Required)") type="email" /
+              .row
+                .col-sm-6
+                  input.form-control name="subject" placeholder="Subject" type="text" /
+              .row
+                .col-sm-12
+                  textarea.form-control name="message" placeholder=("Enter your message ...") 
+              button.btn.btn-default.btn-submit type="submit"  Submit message
+            #response
+          .col-sm-6.outer-top-md.inner-left-sm.border-left
+            h2 Contact
+            p We are based in Berlin and willing to travel all around the world. 
+            h3 REEN
+            ul.contacts
+              li
+                i.icon-location.contact
+                | Berlin, 10405
+              li
+                i.icon-mobile.contact
+                | +49 (123) 456 78 90
+              li
+                a href="mailto:info@reen.com" 
+                  i.icon-mail-1.contact
+                  | info@persa.photo
+            .social-network
+              h3 Social
+              ul.social
+                li
+                  a href="#" 
+                    i.icon-s-facebook
+                li
+                  a href="#" 
+                    i.icon-s-gplus
+                li
+                  a href="#" 
+                    i.icon-s-twitter
+                li
+                  a href="#" 
+                    i.icon-s-pinterest
+                li
+                  a href="#" 
+                    i.icon-s-behance
+                li
+                  a href="#" 
+                    i.icon-s-dribbble
+/! ============================================================= SECTION – CONTACT FORM : END =============================================================
+/! ============================================================= SECTION – MAP =============================================================
+section#map.height-sm
+/! ============================================================= SECTION – MAP : END =============================================================
