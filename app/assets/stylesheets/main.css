@@ -323,28 +323,28 @@ main header + * {
 	padding-bottom: 40px;
 }
 .inner-top {
-	padding-top: 120px;
-}
-.inner-top-md {
-	padding-top: 100px;
-}
-.inner-top-sm {
 	padding-top: 80px;
 }
-.inner-top-xs {
+.inner-top-md {
+	padding-top: 60px;
+}
+.inner-top-sm {
 	padding-top: 40px;
 }
+.inner-top-xs {
+	padding-top: 20px;
+}
 .inner-bottom {
-	padding-bottom: 120px;
-}
-.inner-bottom-md {
-	padding-bottom: 100px;
-}
-.inner-bottom-sm {
 	padding-bottom: 80px;
 }
-.inner-bottom-xs {
+.inner-bottom-md {
+	padding-bottom: 60px;
+}
+.inner-bottom-sm {
 	padding-bottom: 40px;
+}
+.inner-bottom-xs {
+	padding-bottom: 20px;
 }
 .inner-left {
 	padding-left: 75px;
