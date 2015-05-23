@@ -17,6 +17,11 @@ class Story
     story = Story.new html: story_html, story_meta: story_meta
   end
 
+  def self.render(name, options = {}, &block)
+    template_path = Rails.root.join('app', 'views', 'partials/' "_#{name}.html.slim").to_s
+    Slim::Template.new(template_path, options).render(self, options).html_safe
+  end
+
   def self.url_by_key url_key
     "/stories/#{url_key}.html"
   end
