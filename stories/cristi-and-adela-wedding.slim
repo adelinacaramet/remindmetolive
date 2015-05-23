@@ -1,4 +1,4 @@
-.img-bg.height-sm.border-bottom style=("background-image: url(https://farm6.staticflickr.com/5604/15084164423_c0e60f503e_b.jpg);") 
+.img-bg.height-sm.border-bottom style=("background-image: url(https://farm6.staticflickr.com/5604/15084164423_c0e60f503e_b.jpg);")
 .container.inner-top
   .row
     .col-sm-9.center-block.text-center
@@ -13,28 +13,21 @@
         li.client Creative Startup
         li.url
           a href="http://demo.fuviz.com/reen"  demo.fuviz.com/reen
-  .row.inner-top-sm
-    .col-sm-6.inner-top-xs
-      figure
-        img alt="" src="https://farm8.staticflickr.com/7495/15518330677_a39053c054_z.jpg" /
-    .col-sm-6.inner-top-xs
-      figure
-        img alt="" src="https://farm4.staticflickr.com/3950/15084170333_1dc430b50e_z.jpg" /
-  .row
-    .col-sm-12.inner-top-xs
-      figure
-        img.border alt="" src="https://farm4.staticflickr.com/3947/15083553964_1cbd73d43e_b.jpg" /
+
+  = render 'two_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7495/15518330677_a39053c054_z.jpg', 'https://farm4.staticflickr.com/3950/15084170333_1dc430b50e_z.jpg' ] }
+
+  = render 'one_picture', locals: { picture_url: 'https://farm4.staticflickr.com/3947/15083553964_1cbd73d43e_b.jpg' }
   .row
     .col-md-8.col-sm-9.inner-top.center-block.text-center
       h2 Designed with love
       p Soloreiur qui commolu ptatemp dolupta oreprerum tibusam emnis et consent accullignis novum. Laceaque quiae sitiorem rest non restibusaes es tumquam core explabo eictemperum sitiorem posae voloris remped modis doloreiur qui commolu dolupta oreprerum et consent.
-  .row.inner-top-sm
-    .col-sm-6.inner-top-xs
-      figure
-        img alt="" src="https://farm8.staticflickr.com/7485/15701606531_900f5de720_z.jpg" /
-    .col-sm-6.inner-top-xs
-      figure
-        img alt="" src="https://farm4.staticflickr.com/3943/15518325217_173a3ffe65_z.jpg" /
+
+  = render 'four_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7563/15672129038_56cc3c65ff_z.jpg', 'https://farm9.staticflickr.com/8642/15237360914_6cf86276a1_z.jpg', 'https://farm9.staticflickr.com/8570/15672292130_9cf83cc46e_z.jpg', 'https://farm8.staticflickr.com/7577/15859633735_b03b0b6cb0_z.jpg' ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7485/15701606531_900f5de720_z.jpg', 'https://farm4.staticflickr.com/3943/15518325217_173a3ffe65_z.jpg' ] }
+
+  = render 'three_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7488/15237349444_ecdf4d5a17_c.jpg', 'https://farm8.staticflickr.com/7480/15239987973_0b3deaf05f_c.jpg', 'https://farm8.staticflickr.com/7558/15673868857_ca105db163_c.jpg' ] }
+
   .row
     .col-md-8.col-sm-9.inner-top.center-block.text-center
       h2 Clean, beautiful and unique
