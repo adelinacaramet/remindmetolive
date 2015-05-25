@@ -8,4 +8,7 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def about1
+  end
 end

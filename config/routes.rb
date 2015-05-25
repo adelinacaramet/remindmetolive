@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'contact', to: 'home#contact'
   get 'about', to: 'home#about'
+  get 'about1', to: 'home#about1'
 
   get 'stories/:url_key.html', to: 'stories#show'
   get 'stories', to: 'stories#index'
