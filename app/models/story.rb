@@ -19,7 +19,7 @@ class Story
 
   def self.render(name, options = {}, &block)
     template_path = Rails.root.join('app', 'views', 'partials/' "_#{name}.html.slim").to_s
-    Slim::Template.new(template_path, options).render(self, options).html_safe
+    Slim::Template.new(template_path, {}).render(self, options).html_safe
   end
 
   def self.url_by_key url_key

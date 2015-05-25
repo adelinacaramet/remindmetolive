@@ -35,7 +35,7 @@ RSpec.describe Story, :type => :model do
       end
 
       it 'should have the right tags' do
-        expect(meta[:tags]).to eq 'weddding, ceremony, travel'
+        expect(meta[:tags]).to eq ['weddding', 'ceremony', 'travel']
       end
 
       it 'should have the right keywords' do
@@ -49,15 +49,6 @@ RSpec.describe Story, :type => :model do
       it 'should return a html' do
         expect(html).not_to be_nil
       end
-
-      it "should have the correct html" do
-        story_path = Rails.root.join('stories', "#{url_key}.slim").to_s
-        slim_template = Slim::Template.new(story_path)
-        story_html = slim_template.render(self)
-
-        expect(html).to eq story_html
-      end
-      
     end
   end
 end

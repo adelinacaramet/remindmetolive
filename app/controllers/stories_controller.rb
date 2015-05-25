@@ -1,7 +1,7 @@
 class StoriesController < ApplicationController
 
   def index
-    @story_metas = StoryMeta.get_all
+    @story_metas = StoryMeta.get_published
   end
 
   def show

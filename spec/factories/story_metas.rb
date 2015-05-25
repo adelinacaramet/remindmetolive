@@ -5,7 +5,9 @@ FactoryGirl.define do
     url '/stories/cristi-and-adela-wedding.html'
     description 'description'
     url_key 'cristi-and-adela-wedding'
-    tags 'wedding, fun'
+    tags ['wedding', 'fun']
+    category 'Wedding'
     keywords 'fun, wedding'
+    status 'published'
   end
 end

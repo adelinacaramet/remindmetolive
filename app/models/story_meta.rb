@@ -6,8 +6,14 @@ class StoryMeta
   attribute :url, String
   attribute :description, String
   attribute :url_key, String
-  attribute :tags, String
+  attribute :tags, []
   attribute :keywords, String
+  attribute :category, String
+  attribute :status, String
+
+  def self.get_published
+    self.get_all.select { |story_meta| story_meta.status == 'published' }
+  end
 
   def self.get_all
     story_meta_paths = StoryMeta.get_story_meta_paths
@@ -16,13 +22,17 @@ class StoryMeta
 
   def self.parse_meta_file meta_path
     meta_hash = Hash[File.read(meta_path).split("\n").map{|i|i.split(': ')}]
+    tags = extract_tags meta_hash['tags']
+    category = extract_category tags
     story_meta = StoryMeta.new title: meta_hash['title'],
                                picture_url: meta_hash['picture_url'],
                                url: Story.url_by_key(meta_hash['url_key']),
                                description: meta_hash['description'],
                                url_key: meta_hash['url_key'],
-                               tags: meta_hash['tags'],
-                               keywords: meta_hash['keywords']
+                               tags: tags,
+                               keywords: meta_hash['keywords'],
+                               category: category,
+                               status: meta_hash['status']
   end
 
 protected
@@ -37,5 +47,14 @@ protected
       story_metas << StoryMeta.parse_meta_file(story_meta_path)
     end
     story_metas
+  end
+
+  def self.extract_tags tags_string
+    tags = tags_string.strip.split(',').map {|tag| tag.strip}
+  end
+
+  def self.extract_category tags
+    return '' if tags.empty?
+    tags.first.strip.capitalize
   end
 end
