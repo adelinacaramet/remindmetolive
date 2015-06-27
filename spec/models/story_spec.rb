@@ -1,23 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe Story, :type => :model do
+RSpec.describe Post, :type => :model do
 
   context '#get_published_by_url_key' do
     url_key = 'cristi-and-adela-wedding'
 
     before do
-      story_meta = build(:story_meta)
-      allow(StoryMeta).to receive(:get_published_story_meta_by).and_return(story_meta)
+      post_meta = build(:post_meta)
+      allow(PostMeta).to receive(:get_published_post_meta_by).and_return(post_meta)
     end
 
-    subject { Story.get_published_by_url_key url_key }
+    subject { Post.get_published_by_url_key url_key }
 
-    it 'should return a story' do
+    it 'should return a post' do
       is_expected.not_to be_nil
     end
 
     describe 'meta' do
-      let(:meta) { subject.story_meta.attributes }
+      let(:meta) { subject.post_meta.attributes }
 
       it 'should return a meta' do
        expect(meta).not_to be_nil

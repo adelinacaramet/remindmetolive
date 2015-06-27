@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe Story, :type => :model do
+RSpec.describe Post, :type => :model do
 
   before do
     ActionController::Base.perform_caching = false
-    story_meta = build(:story_meta)
-    allow(StoryMeta).to receive(:parse_meta_file).and_return(story_meta)
+    post_meta = build(:post_meta)
+    allow(PostMeta).to receive(:parse_meta_file).and_return(post_meta)
   end
 
   context '#get_all' do
 
-    subject { StoryMeta.get_all }
+    subject { PostMeta.get_all }
 
     it 'should contain' do
       expect(subject.first.attributes).to eq title: "Cristi and Adela Wedding",
@@ -18,7 +18,7 @@ RSpec.describe Story, :type => :model do
                                              url: '/stories/cristi-and-adela-wedding.html',
                                              description: 'The best wedding ever',
                                              url_key: 'cristi-and-adela-wedding',
-                                             story_file_name: '2015-02-03-cristi-and-adela-wedding.slim',
+                                             post_file_name: '2015-02-03-cristi-and-adela-wedding.slim',
                                              tags: ['wedding', 'ceremony', 'fun'],
                                              keywords: 'fun, wedding',
                                              category: 'Wedding',
@@ -28,46 +28,46 @@ RSpec.describe Story, :type => :model do
 
   context '#get_published' do
     before do
-      story_metas = [build(:story_meta, status: 'draft'), build(:story_meta, title: 'Published Story', status: 'published')]
-      allow(StoryMeta).to receive(:get_all).and_return(story_metas)
+      post_metas = [build(:post_meta, status: 'draft'), build(:post_meta, title: 'Published Story', status: 'published')]
+      allow(PostMeta).to receive(:get_all).and_return(post_metas)
     end
 
-    subject { StoryMeta.get_published }
+    subject { PostMeta.get_published }
 
-    it 'should return one story meta' do
+    it 'should return one post meta' do
       expect(subject.size).to eq 1
     end
 
-    it 'should return the correct story meta' do
+    it 'should return the correct post meta' do
       expect(subject.first.title).to eq 'Published Story'
     end
   end
 
-  context '#create_story_metas' do
+  context '#create_post_metas' do
 
-    subject { StoryMeta.create_story_metas [ '/stories/story.meta' ] }
+    subject { PostMeta.create_post_metas [ '/posts/post.meta' ] }
 
-    it 'should have at least one story meta' do
+    it 'should have at least one post meta' do
       is_expected.not_to be_empty
     end
 
-    it 'should have exactly 1 story meta' do
+    it 'should have exactly 1 post meta' do
       expect(subject.size).to eq 1
     end
   end
 
-  context '#get_story_meta_paths' do
+  context '#get_post_meta_paths' do
 
-    subject { StoryMeta.get_story_meta_paths }
+    subject { PostMeta.get_post_meta_paths }
 
-    it 'should return story meta paths' do
+    it 'should return post meta paths' do
       is_expected.not_to be_empty
     end
   end
 
   context '#extract_tags' do
     describe 'more tags' do
-      subject { StoryMeta.extract_tags 'travel ,  wedding  '}
+      subject { PostMeta.extract_tags 'travel ,  wedding  '}
 
       it 'should return an array of 2 tags' do
         expect(subject).to eq(['travel', 'wedding'])
@@ -75,7 +75,7 @@ RSpec.describe Story, :type => :model do
     end
 
     describe 'no tags' do
-      subject { StoryMeta.extract_tags '   '}
+      subject { PostMeta.extract_tags '   '}
 
       it 'should return an empty array' do
         expect(subject).to be_empty
@@ -83,7 +83,7 @@ RSpec.describe Story, :type => :model do
     end
 
     describe 'one tag' do
-      subject { StoryMeta.extract_tags ' travel '}
+      subject { PostMeta.extract_tags ' travel '}
 
       it 'should return an array with one element' do
         expect(subject).to eq(['travel'])
@@ -93,7 +93,7 @@ RSpec.describe Story, :type => :model do
 
   context '#extract_category' do
     describe 'more tags' do
-      subject { StoryMeta.extract_category [' travel ', 'wedding']}
+      subject { PostMeta.extract_category [' travel ', 'wedding']}
 
       it 'should return the correct category' do
         expect(subject).to eq('Travel')
@@ -101,7 +101,7 @@ RSpec.describe Story, :type => :model do
     end
 
     describe 'no tags' do
-      subject { StoryMeta.extract_category []}
+      subject { PostMeta.extract_category []}
 
       it 'should return an empty string' do
         expect(subject).to be_empty

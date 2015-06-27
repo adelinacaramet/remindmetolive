@@ -1,20 +1,20 @@
 require 'slim'
 
-class Story
+class Post
   include Virtus.model
 
   attribute :html, String
-  attribute :story_meta, StoryMeta
+  attribute :post_meta, PostMeta
 
   def self.get_published_by_url_key url_key
-    Rails.cache.fetch("/stories/#{url_key}") do
-      story_meta = StoryMeta.get_published_story_meta_by url_key
+    Rails.cache.fetch("/posts/#{url_key}") do
+      post_meta = PostMeta.get_published_post_meta_by url_key
 
-      story_path = Rails.root.join('stories', "#{story_meta.story_file_name}").to_s
-      slim_template = Slim::Template.new(story_path)
-      story_html = slim_template.render(self)
+      post_path = Rails.root.join('posts', "#{post_meta.post_file_name}").to_s
+      slim_template = Slim::Template.new(post_path)
+      post_html = slim_template.render(self)
 
-      story = Story.new html: story_html, story_meta: story_meta
+      post = Post.new html: post_html, post_meta: post_meta
     end
   end
 

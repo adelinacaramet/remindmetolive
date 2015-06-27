@@ -10,14 +10,14 @@ section#portfolio
     .row
       .col-sm-12.portfolio
         ul.items.col-3.gap
-          - for story_meta in @story_metas do
+          - for post_meta in @post_metas do
             li.item.thumb.interactive
               figure
                 .icon-overlay.icn-link
-                  a href="#{story_meta.url}" 
-                    img alt="" src="#{story_meta.picture_url}" /
+                  a href="#{post_meta.url}" 
+                    img alt="" src="#{post_meta.picture_url}" /
                 figcaption.bordered.no-top-border
                   .info
                     h4
-                      a href="#{story_meta.url}"  #{story_meta.title}
-                    p #{story_meta.category}
+                      a href="#{post_meta.url}"  #{post_meta.title}
+                    p #{post_meta.category}
