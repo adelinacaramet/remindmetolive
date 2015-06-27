@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
   root 'home#index'
-  get 'contact', to: 'home#contact'
-  get 'about', to: 'home#about'
+  get '/contact', to: 'home#contact'
+  get '/about', to: 'home#about'
 
-  get 'stories/:url_key.html', to: 'stories#show'
-  get 'stories', to: 'stories#index'
+  get '/stories/:url_key.html', to: 'stories#show'
+  get '/stories', to: 'stories#index'
+
+  get '/streets-of-berlin', to: redirect('/tags/streets-of-berlin')
+  get '/cats', to: redirect('/tags/streets-of-berlin')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

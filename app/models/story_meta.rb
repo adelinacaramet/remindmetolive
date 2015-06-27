@@ -6,10 +6,25 @@ class StoryMeta
   attribute :url, String
   attribute :description, String
   attribute :url_key, String
+  attribute :story_file_name, String
   attribute :tags, []
   attribute :keywords, String
   attribute :category, String
   attribute :status, String
+
+  def self.get_published_story_meta_by url_key
+    @@url_keys_to_published_story_metas ||= StoryMeta.url_keys_to_published_story_metas
+    @@url_keys_to_published_story_metas[url_key]
+  end
+
+  def self.url_keys_to_published_story_metas
+    published_story_metas = StoryMeta.get_published
+    url_keys_to_published_story_metas = {}
+    published_story_metas.each do |story_meta|
+      url_keys_to_published_story_metas[story_meta.url_key] = story_meta
+    end
+    url_keys_to_published_story_metas
+  end
 
   def self.get_published
     self.get_all.select { |story_meta| story_meta.status == 'published' }
@@ -29,6 +44,7 @@ class StoryMeta
                                url: Story.url_by_key(meta_hash['url_key']),
                                description: meta_hash['description'],
                                url_key: meta_hash['url_key'],
+                               story_file_name: meta_hash['story_file_name'],
                                tags: tags,
                                keywords: meta_hash['keywords'],
                                category: category,

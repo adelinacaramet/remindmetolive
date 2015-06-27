@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Story, :type => :model do
 
-  before do 
+  before do
+    ActionController::Base.perform_caching = false
     story_meta = build(:story_meta)
     allow(StoryMeta).to receive(:parse_meta_file).and_return(story_meta)
   end
@@ -15,9 +16,10 @@ RSpec.describe Story, :type => :model do
       expect(subject.first.attributes).to eq title: "Cristi and Adela Wedding",
                                              picture_url: 'https://farm4.staticflickr.com/3940/15084169773_53497cc18a_n.jpg',
                                              url: '/stories/cristi-and-adela-wedding.html',
-                                             description: 'description',
+                                             description: 'The best wedding ever',
                                              url_key: 'cristi-and-adela-wedding',
-                                             tags: ['wedding', 'fun'],
+                                             story_file_name: '2015-02-03-cristi-and-adela-wedding.slim',
+                                             tags: ['wedding', 'ceremony', 'fun'],
                                              keywords: 'fun, wedding',
                                              category: 'Wedding',
                                              status: 'published'
@@ -51,7 +53,7 @@ RSpec.describe Story, :type => :model do
 
     it 'should have exactly 1 story meta' do
       expect(subject.size).to eq 1
-    end 
+    end
   end
 
   context '#get_story_meta_paths' do
@@ -74,7 +76,7 @@ RSpec.describe Story, :type => :model do
 
     describe 'no tags' do
       subject { StoryMeta.extract_tags '   '}
-      
+
       it 'should return an empty array' do
         expect(subject).to be_empty
       end
@@ -82,7 +84,7 @@ RSpec.describe Story, :type => :model do
 
     describe 'one tag' do
       subject { StoryMeta.extract_tags ' travel '}
-      
+
       it 'should return an array with one element' do
         expect(subject).to eq(['travel'])
       end
@@ -100,10 +102,10 @@ RSpec.describe Story, :type => :model do
 
     describe 'no tags' do
       subject { StoryMeta.extract_category []}
-      
+
       it 'should return an empty string' do
         expect(subject).to be_empty
       end
-    end 
+    end
   end
 end

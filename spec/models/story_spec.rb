@@ -2,10 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Story, :type => :model do
 
-  context '#get_by_url_key' do
+  context '#get_published_by_url_key' do
     url_key = 'cristi-and-adela-wedding'
 
-    subject { Story.get_by_url_key url_key }
+    before do
+      story_meta = build(:story_meta)
+      allow(StoryMeta).to receive(:get_published_story_meta_by).and_return(story_meta)
+    end
+
+    subject { Story.get_published_by_url_key url_key }
 
     it 'should return a story' do
       is_expected.not_to be_nil
@@ -19,7 +24,7 @@ RSpec.describe Story, :type => :model do
       end
 
       it 'should have the right title' do
-        expect(meta[:title]).to eq 'Cristi And Adela Wedding'
+        expect(meta[:title]).to eq 'Cristi and Adela Wedding'
       end
 
       it 'should have the right url_key' do
@@ -27,7 +32,7 @@ RSpec.describe Story, :type => :model do
       end
 
       it 'should have the right description' do
-        expect(meta[:description]).to eq 'seo description'
+        expect(meta[:description]).to eq 'The best wedding ever'
       end
 
       it 'should have the right picture_url' do
@@ -35,11 +40,11 @@ RSpec.describe Story, :type => :model do
       end
 
       it 'should have the right tags' do
-        expect(meta[:tags]).to eq ['weddding', 'ceremony', 'travel']
+        expect(meta[:tags]).to eq ['wedding', 'ceremony', 'fun']
       end
 
       it 'should have the right keywords' do
-        expect(meta[:keywords]).to eq 'wedding'
+        expect(meta[:keywords]).to eq 'fun, wedding'
       end
     end
 
