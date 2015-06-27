@@ -21,18 +21,18 @@ RSpec.describe Post, :type => :model do
                                              post_file_name: '2015-02-03-cristi-and-adela-wedding.slim',
                                              tags: ['wedding', 'ceremony', 'fun'],
                                              keywords: 'fun, wedding',
-                                             category: 'Wedding',
+                                             category: 'stories',
                                              status: 'published'
     end
   end
 
-  context '#get_published' do
+  context '#get_all_published' do
     before do
       post_metas = [build(:post_meta, status: 'draft'), build(:post_meta, title: 'Published Story', status: 'published')]
       allow(PostMeta).to receive(:get_all).and_return(post_metas)
     end
 
-    subject { PostMeta.get_published }
+    subject { PostMeta.get_all_published }
 
     it 'should return one post meta' do
       expect(subject.size).to eq 1
@@ -87,24 +87,6 @@ RSpec.describe Post, :type => :model do
 
       it 'should return an array with one element' do
         expect(subject).to eq(['travel'])
-      end
-    end
-  end
-
-  context '#extract_category' do
-    describe 'more tags' do
-      subject { PostMeta.extract_category [' travel ', 'wedding']}
-
-      it 'should return the correct category' do
-        expect(subject).to eq('Travel')
-      end
-    end
-
-    describe 'no tags' do
-      subject { PostMeta.extract_category []}
-
-      it 'should return an empty string' do
-        expect(subject).to be_empty
       end
     end
   end

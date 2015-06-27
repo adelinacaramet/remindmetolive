@@ -7,7 +7,7 @@ FactoryGirl.define do
     url_key 'cristi-and-adela-wedding'
     post_file_name '2015-02-03-cristi-and-adela-wedding.slim'
     tags ['wedding', 'ceremony', 'fun']
-    category 'Wedding'
+    category 'stories'
     keywords 'fun, wedding'
     status 'published'
   end

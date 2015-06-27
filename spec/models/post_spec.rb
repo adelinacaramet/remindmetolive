@@ -4,13 +4,14 @@ RSpec.describe Post, :type => :model do
 
   context '#get_published_by_url_key' do
     url_key = 'cristi-and-adela-wedding'
+    category = 'stories'
 
     before do
       post_meta = build(:post_meta)
       allow(PostMeta).to receive(:get_published_post_meta_by).and_return(post_meta)
     end
 
-    subject { Post.get_published_by_url_key url_key }
+    subject { Post.get_published_by category, url_key }
 
     it 'should return a post' do
       is_expected.not_to be_nil
