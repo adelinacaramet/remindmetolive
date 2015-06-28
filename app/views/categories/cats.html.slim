@@ -6,18 +6,43 @@ section#portfolio
           h1 Best Cat Pictures in the World
           p Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes.
 
-  .container.inner-bottom
+section#blog.light-bg
+  .container.inner-top-sm.inner-bottom.classic-blog.no-sidebar
     .row
-      .col-sm-12.portfolio
-        ul.items.col-3.gap
+      .col-md-9.center-block
+        .posts.sidemeta
           - for post_meta in @post_metas do
-            li.item.thumb.interactive
-              figure
-                .icon-overlay.icn-link
+            .post.format-image
+              .date-wrapper
+                .date
+                  span.day 10
+                  span.month May
+              .format-wrapper
+                a data-filter=".format-image" href="#"
+                  i.icon-picture-1
+              .post-content
+                figure.icon-overlay.icn-link.post-media
                   a href="#{post_meta.url}"
                     img alt="" src="#{post_meta.picture_url}" /
-                figcaption.bordered.no-top-border
-                  .info
-                    h4
-                      a href="#{post_meta.url}"  #{post_meta.title}
-                    p #{post_meta.category}
+                h2.post-title
+                  a href="#{post_meta.url}"  #{post_meta.title}
+                ul.meta
+                  li.categories
+                    a href="#"  Photography
+                  li.comments
+                    a href="#"  63
+                  li.likes
+                    a href="#"  114
+                p Magnis modipsae que lib voloratati andigen daepeditem quiate ut repore autem labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped modis volor. Doloreiur qui commolu oreprerum.
+                a.btn href="#{post_meta.url}"  Read more
+        ul.pagination
+          li
+            a href="#"  Prev
+          li.active
+            a href="#"  1
+          li
+            a href="#"  2
+          li
+            a href="#"  3
+          li
+            a href="#"  Next
