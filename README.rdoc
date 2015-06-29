@@ -1,5 +1,0 @@
-== README
-
-Rake tasks:
-
-<tt>rake sitemap:refresh</tt>

@@ -11,7 +11,8 @@
  * file per style scope.
  *
  *= require bootstrap.min.css
- *= require main
+ *= require main.css
+ *x= skrollr.css
  *= require blue.css
  *= require owl.carousel.css
  *= require owl.transitions.css
