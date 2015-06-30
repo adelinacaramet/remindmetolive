@@ -11,8 +11,10 @@
             a href="#"
               i.icon-picture
           .post-content
+            figure.post-media
+              img alt="" src="https://farm9.staticflickr.com/8365/8514443226_5d140696fc_h.jpg" /
             p.author
-              a data-placement="left" data-rel="tooltip" href="#" title=("Post author")  Dan Persa
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by Dan
             h1.post-title Teufelsberg
             ul.meta
               li.categories
@@ -29,4 +31,3 @@
               | I took this picture in a warm summer day, on a guided tour on Teufelsberg.
                 For the ones who don't know, Teufelsberg is a deserted radar.
                 Teufelsberg literaly translates from German to The Mountains of the Devil
-            = render 'one_picture', locals: { picture_url: 'https://farm4.staticflickr.com/3956/15525754029_ccea1412cd_h.jpg' }

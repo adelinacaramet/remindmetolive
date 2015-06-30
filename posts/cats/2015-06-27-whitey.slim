@@ -11,8 +11,10 @@
             a href="#"
               i.icon-picture
           .post-content
+            figure.post-media
+              img alt="" src="https://farm4.staticflickr.com/3793/19205562972_1d97f7ae50_h.jpg" /
             p.author
-              a data-placement="left" data-rel="tooltip" href="#" title=("Post author")  Dan Persa
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by Dan
             h1.post-title Whitey
             ul.meta
               li.categories
@@ -25,4 +27,3 @@
                 a href="#"  73
             p
               | Whitey is Cheetah's son
-            = render 'one_picture', locals: { picture_url: 'https://farm4.staticflickr.com/3793/19205562972_1d97f7ae50_h.jpg' }

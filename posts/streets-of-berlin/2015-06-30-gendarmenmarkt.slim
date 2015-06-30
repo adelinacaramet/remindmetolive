@@ -11,8 +11,10 @@
             a href="#"
               i.icon-picture
           .post-content
+            figure.post-media
+              img alt="" src="https://farm9.staticflickr.com/8365/8514443226_5d140696fc_h.jpg" /
             p.author
-              a data-placement="left" data-rel="tooltip" href="#" title=("Post author")  Dan
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by Dan
             h1.post-title Gendarmenmarkt
             ul.meta
               li.categories
@@ -27,4 +29,3 @@
                 a href="#"  73
             p
               | Gendarmenmarkt in the winter
-            = render 'one_picture', locals: { picture_url: 'https://farm9.staticflickr.com/8365/8514443226_5d140696fc_h.jpg' }
