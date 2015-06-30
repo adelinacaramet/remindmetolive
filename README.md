@@ -28,3 +28,14 @@
     docker ps
     docker kill <container id>
     docker run -p 80:80 danpersa/remindmetolive:v1
+
+
+## Testing
+
+For faster tests:
+
+    spring binstub --all
+    spring status
+    guard
+
+The tests will run automatically as soon as you change a file

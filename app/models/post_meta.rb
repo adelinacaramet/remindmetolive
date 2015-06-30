@@ -31,18 +31,21 @@ class PostMeta
   end
 
   def self.published_for_category category
-    cached_published_post_metas_table[category].values
+    published_for_category = cached_published_post_metas_table[category]
+    return nil if published_for_category.nil?
+    # returns an array of PostMeta
+    published_for_category.values
   end
 
 private
-  def self.all_published
-    self.get_all.select { |post_meta| post_meta.status == 'published' }
-  end
 
-
-  def self.get_all
+  def self.all
     post_meta_paths = PostMeta.post_meta_paths
     PostMeta.create_post_metas post_meta_paths
+  end
+
+  def self.all_published
+    self.all.select { |post_meta| post_meta.status == 'published' }
   end
 
   def self.parse_meta_file meta_path
