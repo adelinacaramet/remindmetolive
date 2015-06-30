@@ -1,16 +1,32 @@
-.container.inner-top
+.container.inner-top-sm.inner-bottom.classic-blog.no-sidebar
   .row
-    .col-sm-9.center-block.text-center
-      header
-        h1 Teufelsberg
-        p
-          | I took this picture in a warm summer day, on a guided tour on Teufelsberg.
-            For the ones who don't know, Teufelsberg is a deserted radar.
-            Teufelsberg literaly translates from German to The Mountains of the Devil
-  .row.inner-top-xs
-    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
-      ul.item-details
-        li.date June 30, 2016
-        li.categories Street Photography, Berlin, Portrait
-
-  = render 'one_picture', locals: { picture_url: 'https://farm4.staticflickr.com/3956/15525754029_ccea1412cd_h.jpg' }
+    .col-md-9.center-block
+      .sidemeta
+        .post.format-gallery
+          .date-wrapper
+            .date
+              span.day 30
+              span.month June
+          .format-wrapper
+            a href="#"
+              i.icon-picture
+          .post-content
+            p.author
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author")  Dan Persa
+            h1.post-title Teufelsberg
+            ul.meta
+              li.categories
+                a href="#" Street Photography
+                | ,
+                a href="#" Berlin
+                | ,
+                a href="#" Portrait
+              li.comments
+                a href="#"  24
+              li.likes
+                a href="#"  73
+            p
+              | I took this picture in a warm summer day, on a guided tour on Teufelsberg.
+                For the ones who don't know, Teufelsberg is a deserted radar.
+                Teufelsberg literaly translates from German to The Mountains of the Devil
+            = render 'one_picture', locals: { picture_url: 'https://farm4.staticflickr.com/3956/15525754029_ccea1412cd_h.jpg' }
