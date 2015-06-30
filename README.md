@@ -20,4 +20,11 @@
     boot2docker ip
 
     docker push danpersa/remindmetolive
-    docker pull danpersa/remindmetolive
+    docker pull danpersa/remindmetolive:v2
+
+### Docker Redeploy
+
+    docker pull danpersa/remindmetolive:v2
+    docker ps
+    docker kill <container id>
+    docker run -p 80:80 danpersa/remindmetolive:v1
