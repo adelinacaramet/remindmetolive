@@ -7,7 +7,7 @@ RSpec.describe Post, :type => :model do
     allow(PostMeta).to receive(:parse_meta_file).and_return(post_meta)
   end
 
-  context '#self.categories' do
+  context '#categories' do
 
     subject { PostMeta.categories }
 
@@ -23,7 +23,7 @@ RSpec.describe Post, :type => :model do
     end
   end
 
-  context 'self.published_post_meta_by' do
+  context '#published_post_meta_by' do
 
     describe 'when using a valid category' do
       subject { PostMeta.published_post_meta_by 'stories', 'cristi-and-adela-wedding' }
@@ -68,13 +68,13 @@ RSpec.describe Post, :type => :model do
     end
   end
 
-  context '#get_all_published' do
+  context '#all_published' do
     before do
       post_metas = [build(:post_meta, status: 'draft'), build(:post_meta, title: 'Published Story', status: 'published')]
       allow(PostMeta).to receive(:get_all).and_return(post_metas)
     end
 
-    subject { PostMeta.get_all_published }
+    subject { PostMeta.all_published }
 
     it 'should return one post meta' do
       expect(subject.size).to eq 1
@@ -98,9 +98,9 @@ RSpec.describe Post, :type => :model do
     end
   end
 
-  context '#get_post_meta_paths' do
+  context '#post_meta_paths' do
 
-    subject { PostMeta.get_post_meta_paths }
+    subject { PostMeta.post_meta_paths }
 
     it 'should return post meta paths' do
       is_expected.not_to be_empty

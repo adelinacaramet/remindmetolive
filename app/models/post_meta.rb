@@ -35,13 +35,13 @@ class PostMeta
   end
 
 private
-  def self.get_all_published
+  def self.all_published
     self.get_all.select { |post_meta| post_meta.status == 'published' }
   end
 
 
   def self.get_all
-    post_meta_paths = PostMeta.get_post_meta_paths
+    post_meta_paths = PostMeta.post_meta_paths
     PostMeta.create_post_metas post_meta_paths
   end
 
@@ -62,7 +62,7 @@ private
   end
 
   def self.published_post_metas_table
-    published_post_metas = PostMeta.get_all_published
+    published_post_metas = PostMeta.all_published
     published_post_metas_table = {}
     published_post_metas.each do |post_meta|
       if published_post_metas_table[post_meta.category].nil?
@@ -74,7 +74,7 @@ private
     published_post_metas_table
   end
 
-  def self.get_post_meta_paths
+  def self.post_meta_paths
     posts_path = Rails.root.join('posts')
     post_meta_paths = Dir["#{posts_path}/**/*.meta"]
   end
