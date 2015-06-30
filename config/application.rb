@@ -34,6 +34,5 @@ module PersaPhotography
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
-    config.cache_store = :memory_store, { size: 32.megabytes }
   end
 end
