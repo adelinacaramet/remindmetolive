@@ -7,4 +7,12 @@ class CategoriesController < ApplicationController
   def cats
     @post_metas = PostMeta.get_published_for_category 'cats'
   end
+
+  def streets_of_berlin
+    @post_metas = PostMeta.get_published_for_category 'streets-of-berlin'
+  end
+
+  def categories
+    @categories = PostMeta.categories
+  end
 end

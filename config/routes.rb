@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get '/stories', to: 'categories#stories'
   get '/cats', to: 'categories#cats'
-
   get '/streets-of-berlin', to: 'categories#streets_of_berlin'
+  get '/categories', to: 'categories#categories'
 
   get '/:category/:url_key.html', to: 'posts#show'
 

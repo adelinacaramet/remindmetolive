@@ -12,6 +12,11 @@ class PostMeta
   attribute :category, String
   attribute :status, String
 
+  def self.categories
+    @@url_keys_to_published_post_metas ||= PostMeta.url_keys_to_published_post_metas
+    @@url_keys_to_published_post_metas.keys
+  end
+
   def self.get_published_post_meta_by category, url_key
     @@url_keys_to_published_post_metas ||= PostMeta.url_keys_to_published_post_metas
     @@url_keys_to_published_post_metas[category][url_key]
