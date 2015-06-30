@@ -13,40 +13,32 @@ class PostMeta
   attribute :status, String
   attribute :layout, String
 
-  def url_keys_to_published_post_metas
-    Rails.cache.fetch("/url_keys_to_published_post_metas") do
-      PostMeta.url_keys_to_published_post_metas
+  # keys of the table are category and url_key
+  def self.cached_published_post_metas_table
+    Rails.cache.fetch("/published_post_metas_table") do
+      published_post_metas_table
     end
   end
 
   def self.categories
-    url_keys_to_published_post_metas.keys
+    published_post_metas_table.keys
   end
 
-  def self.get_published_post_meta_by category, url_key
-    url_keys_to_published_post_metas[category][url_key]
+  def self.published_post_meta_by category, url_key
+    published_for_category = cached_published_post_metas_table[category]
+    return nil if published_for_category.nil?
+    published_for_category[url_key]
   end
 
-  def self.url_keys_to_published_post_metas
-    published_post_metas = PostMeta.get_all_published
-    url_keys_to_published_post_metas = {}
-    published_post_metas.each do |post_meta|
-      if url_keys_to_published_post_metas[post_meta.category].nil?
-        url_keys_to_published_post_metas[post_meta.category] = {post_meta.url_key => post_meta }
-      else
-        url_keys_to_published_post_metas[post_meta.category][post_meta.url_key] = post_meta
-      end
-    end
-    url_keys_to_published_post_metas
+  def self.published_for_category category
+    cached_published_post_metas_table[category].values
   end
 
-  def self.get_published_for_category category
-    url_keys_to_published_post_metas[category].values
-  end
-
+private
   def self.get_all_published
     self.get_all.select { |post_meta| post_meta.status == 'published' }
   end
+
 
   def self.get_all
     post_meta_paths = PostMeta.get_post_meta_paths
@@ -69,7 +61,19 @@ class PostMeta
                                layout: meta_hash['layout']
   end
 
-protected
+  def self.published_post_metas_table
+    published_post_metas = PostMeta.get_all_published
+    published_post_metas_table = {}
+    published_post_metas.each do |post_meta|
+      if published_post_metas_table[post_meta.category].nil?
+        published_post_metas_table[post_meta.category] = {post_meta.url_key => post_meta }
+      else
+        published_post_metas_table[post_meta.category][post_meta.url_key] = post_meta
+      end
+    end
+    published_post_metas_table
+  end
+
   def self.get_post_meta_paths
     posts_path = Rails.root.join('posts')
     post_meta_paths = Dir["#{posts_path}/**/*.meta"]

@@ -8,7 +8,7 @@ class Post
 
   def self.get_published_by category, url_key
     Rails.cache.fetch("/posts/#{category}/#{url_key}") do
-      post_meta = PostMeta.get_published_post_meta_by category, url_key
+      post_meta = PostMeta.published_post_meta_by category, url_key
 
       post_path = Rails.root.join('posts', "#{category}" , "#{post_meta.post_file_name}").to_s
       slim_template = Slim::Template.new(post_path)

@@ -8,7 +8,7 @@ RSpec.describe Post, :type => :model do
 
     before do
       post_meta = build(:post_meta)
-      allow(PostMeta).to receive(:get_published_post_meta_by).and_return(post_meta)
+      allow(PostMeta).to receive(:published_post_meta_by).and_return(post_meta)
     end
 
     subject { Post.get_published_by category, url_key }

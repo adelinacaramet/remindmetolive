@@ -7,11 +7,53 @@ RSpec.describe Post, :type => :model do
     allow(PostMeta).to receive(:parse_meta_file).and_return(post_meta)
   end
 
+  context '#self.categories' do
+
+    subject { PostMeta.categories }
+
+    describe 'when we have the default categories' do
+
+      it 'should contain the correct number of categories' do
+        expect(subject.size).to eq 1
+      end
+
+      it 'should contain the correct category' do
+        expect(subject.first).to eq 'stories'
+      end
+    end
+  end
+
+  context 'self.published_post_meta_by' do
+
+    describe 'when using a valid category' do
+      subject { PostMeta.published_post_meta_by 'stories', 'cristi-and-adela-wedding' }
+
+      it 'should return the correct map of url_key to post metas' do
+        expect(subject.attributes).to eq build(:post_meta).attributes
+      end
+    end
+
+    describe 'when giving a missing category' do
+      subject { PostMeta.published_post_meta_by 'nonexisting', 'cristi-and-adela-wedding' }
+
+      it 'should return nil' do
+        expect(subject).to be_nil
+      end
+    end
+
+    describe 'when giving a missing url_key' do
+      subject { PostMeta.published_post_meta_by 'stories', 'nonexisting' }
+      it 'should return nil' do
+        expect(subject).to be_nil
+      end
+    end
+  end
+
   context '#get_all' do
 
     subject { PostMeta.get_all }
 
-    it 'should contain' do
+    it 'should contain the correct attributes' do
       expect(subject.first.attributes).to eq title: "Cristi and Adela Wedding",
                                              picture_url: 'https://farm4.staticflickr.com/3940/15084169773_53497cc18a_n.jpg',
                                              url: '/stories/cristi-and-adela-wedding.html',

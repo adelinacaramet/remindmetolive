@@ -1,15 +1,15 @@
 class CategoriesController < ApplicationController
 
   def stories
-    @post_metas = PostMeta.get_published_for_category 'stories'
+    @post_metas = PostMeta.published_for_category 'stories'
   end
 
   def cats
-    @post_metas = PostMeta.get_published_for_category 'cats'
+    @post_metas = PostMeta.published_for_category 'cats'
   end
 
   def streets_of_berlin
-    @post_metas = PostMeta.get_published_for_category 'streets-of-berlin'
+    @post_metas = PostMeta.published_for_category 'streets-of-berlin'
   end
 
   def categories
