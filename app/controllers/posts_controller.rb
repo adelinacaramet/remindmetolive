@@ -9,6 +9,6 @@ class PostsController < ApplicationController
       return
     end
     @meta = @post.post_meta
-    render layout: 'post'
+    render layout: @post.post_meta.layout
   end
 end

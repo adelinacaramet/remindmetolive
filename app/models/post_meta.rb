@@ -11,6 +11,7 @@ class PostMeta
   attribute :keywords, String
   attribute :category, String
   attribute :status, String
+  attribute :layout, String
 
   def self.categories
     @@url_keys_to_published_post_metas ||= PostMeta.url_keys_to_published_post_metas
@@ -61,7 +62,8 @@ class PostMeta
                                tags: tags,
                                keywords: meta_hash['keywords'],
                                category: meta_hash['category'],
-                               status: meta_hash['status']
+                               status: meta_hash['status'],
+                               layout: meta_hash['layout']
   end
 
 protected

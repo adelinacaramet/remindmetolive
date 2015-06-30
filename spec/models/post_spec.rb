@@ -47,6 +47,10 @@ RSpec.describe Post, :type => :model do
       it 'should have the right keywords' do
         expect(meta[:keywords]).to eq 'fun, wedding'
       end
+
+      it 'should have the right layout' do
+        expect(meta[:layout]).to eq 'post'
+      end
     end
 
     describe 'html' do

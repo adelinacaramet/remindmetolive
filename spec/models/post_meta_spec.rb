@@ -22,7 +22,8 @@ RSpec.describe Post, :type => :model do
                                              tags: ['wedding', 'ceremony', 'fun'],
                                              keywords: 'fun, wedding',
                                              category: 'stories',
-                                             status: 'published'
+                                             status: 'published',
+                                             layout: 'post'
     end
   end
 
