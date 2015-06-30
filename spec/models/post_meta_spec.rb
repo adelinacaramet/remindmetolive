@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe Post, :type => :model do
 
   before do
-    ActionController::Base.perform_caching = false
     post_meta = build(:post_meta)
     allow(PostMeta).to receive(:parse_meta_file).and_return(post_meta)
   end

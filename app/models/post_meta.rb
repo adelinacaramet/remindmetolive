@@ -13,22 +13,18 @@ class PostMeta
   attribute :status, String
   attribute :layout, String
 
-  def self.init_url_keys_to_published_metas
-    if Rails.application.config.action_controller.perform_caching
-      @@url_keys_to_published_post_metas ||= PostMeta.url_keys_to_published_post_metas
-    else
-      @@url_keys_to_published_post_metas = PostMeta.url_keys_to_published_post_metas
+  def url_keys_to_published_post_metas
+    Rails.cache.fetch("/url_keys_to_published_post_metas") do
+      PostMeta.url_keys_to_published_post_metas
     end
   end
 
   def self.categories
-    init_url_keys_to_published_metas
-    @@url_keys_to_published_post_metas.keys
+    url_keys_to_published_post_metas.keys
   end
 
   def self.get_published_post_meta_by category, url_key
-    init_url_keys_to_published_metas
-    @@url_keys_to_published_post_metas[category][url_key]
+    url_keys_to_published_post_metas[category][url_key]
   end
 
   def self.url_keys_to_published_post_metas
@@ -45,8 +41,7 @@ class PostMeta
   end
 
   def self.get_published_for_category category
-    init_url_keys_to_published_metas
-    @@url_keys_to_published_post_metas[category].values
+    url_keys_to_published_post_metas[category].values
   end
 
   def self.get_all_published
