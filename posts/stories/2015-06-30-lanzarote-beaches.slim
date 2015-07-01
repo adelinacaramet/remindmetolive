@@ -67,7 +67,5 @@
   = render 'two_pictures', locals: { picture_urls: [ 'https://farm9.staticflickr.com/8814/17234121003_a442e2e8f5_b.jpg', 'https://farm6.staticflickr.com/5469/17666997540_8274f1b115_b.jpg' ] }
 
   = render 'one_picture', locals: { picture_url: 'https://farm9.staticflickr.com/8842/17231985904_aca29b52c7_h.jpg' }
-  
-  .row.inner-top-sm
-    .col-md-8.col-sm-9.center-block
-      p
+
+  = render 'disqus', locals: { identifier: 'stories/lanzarote-beaches', title: 'Stories - Lanzarote Beaches' }

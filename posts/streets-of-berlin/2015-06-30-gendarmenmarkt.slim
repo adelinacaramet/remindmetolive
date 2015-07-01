@@ -24,8 +24,9 @@
                 | ,
                 a href="#" Portrait
               li.comments
-                a href="#"  24
+                a href="" data-disqus-identifier="streets-of-berlin/gendarmenmarkt" 0
               li.likes
                 a href="#"  73
             p
               | Gendarmenmarkt in the winter
+            = render 'disqus', locals: { identifier: 'streets-of-berlin/gendarmenmarkt', title: 'Streets Of Berlin - Gendarmenmarkt' }

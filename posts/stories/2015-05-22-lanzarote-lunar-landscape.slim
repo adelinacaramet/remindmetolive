@@ -93,6 +93,4 @@
 
   = render 'two_pictures', locals: { picture_urls: [ 'https://farm6.staticflickr.com/5462/17668260179_7153d99bd9_b.jpg', 'https://farm8.staticflickr.com/7775/17855002141_08a2a7e62b_b.jpg' ] }
 
-  .row.inner-top-sm
-    .col-md-8.col-sm-9.center-block
-      p
+  = render 'disqus', locals: { identifier: 'stories/lanzarote-lunar-landscape', title: 'Stories - Lanzarote Lunar Landscape' }

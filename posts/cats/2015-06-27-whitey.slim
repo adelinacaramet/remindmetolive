@@ -19,11 +19,12 @@
             ul.meta
               li.categories
                 a href="#" Cat
-                | ,
+                | , 
                 a href="#" Pet
               li.comments
-                a href="#"  24
+                a href="" data-disqus-identifier="cats/whitey" 0
               li.likes
                 a href="#"  73
             p
               | Whitey is Cheetah's son
+            = render 'disqus', locals: { identifier: 'cats/whitey', title: 'Cats - Whitey' }

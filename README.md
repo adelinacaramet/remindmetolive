@@ -39,3 +39,5 @@ For faster tests:
     guard
 
 The tests will run automatically as soon as you change a file
+
+[This](http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/) article was really helpful on setting this up.
