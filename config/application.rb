@@ -4,7 +4,6 @@ require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
-require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
@@ -29,10 +28,12 @@ module PersaPhotography
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
-
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
+    config.generators do |g|
+      g.template_engine     :slim
+      g.fixture_replacement :factory_girl
+      g.test_framework      :rspec
+    end
   end
 end

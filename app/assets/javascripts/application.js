@@ -12,7 +12,6 @@
 //
 //= require jquery.min
 //= require jquery.easing.1.3.min
-//= require jquery.form
 //= require jquery.validate.min
 //= require bootstrap.min
 //= require bootstrap-hover-dropdown.min

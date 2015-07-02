@@ -36,9 +36,6 @@ EXPOSE 80 443
 USER app
 ENV HOME /home/app
 
-RUN echo prefix = ~/local >> ~/.npmrc
-RUN curl https://www.npmjs.com/install.sh | sh
-
 # copy the app and give permissions
 RUN mkdir /home/app/webapp
 COPY . /home/app/webapp

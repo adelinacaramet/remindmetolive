@@ -2,3 +2,4 @@
 * Integrate with facebook like
 * Integrate disqus
 * Build the production Docker image only with the production gems
+* Fix the contact form

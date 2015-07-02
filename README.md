@@ -4,13 +4,19 @@
 
     rake sitemap:refresh
 
+    RAILS_ENV=production bundle exec rake assets:precompile --trace
+
+## Start in production mode
+
+    RAILS_ENV=production rails s -e production
+
 ## Docker
 
     boot2docker start
     boot2docker shellinit
-    docker build -t danpersa/remindmetolive:v1 .
-    docker run -p 80:80 danpersa/remindmetolive:v1
-    docker run -i -p 80:80 -t danpersa/remindmetolive:devel /bin/bash
+    docker build -t danpersa/remindmetolive:latest .
+    docker run -p 80:80 danpersa/remindmetolive:latest
+    docker run -i -p 80:80 -t danpersa/remindmetolive:latest /bin/bash
 
     docker exec -t -i YOUR-CONTAINER-ID bash -l
 
@@ -20,14 +26,14 @@
     boot2docker ip
 
     docker push danpersa/remindmetolive
-    docker pull danpersa/remindmetolive:v2
+    docker pull danpersa/remindmetolive:latest
 
 ### Docker Redeploy
 
-    docker pull danpersa/remindmetolive:v2
+    docker pull danpersa/remindmetolive:latest
     docker ps
     docker kill <container id>
-    docker run -p 80:80 danpersa/remindmetolive:v1
+    docker run -p 80:80 danpersa/remindmetolive:latest
 
 
 ## Testing

@@ -13,20 +13,20 @@ section#contact-form
         .row
           .col-sm-6.outer-top-md.inner-right-sm
             h2 Leave a Message
-            form#contactform.forms action="contact.php" method="post"
+            = form_for(:contact, url: '/contact', method: :post, html: {class: 'forms', id: 'contactform'}) do |f|
               .row
                 .col-sm-6
-                  input.form-control name="name" placeholder=("Name (Required)") type="text" /
+                  = f.text_field :name, class: 'form-control', placeholder: 'Name (Required)', type: 'text'
               .row
                 .col-sm-6
-                  input.form-control name="email" placeholder=("Email (Required)") type="email" /
+                  = f.text_field :email, class: 'form-control', placeholder: 'Email (Required)', type: 'email'
               .row
                 .col-sm-6
-                  input.form-control name="subject" placeholder="Subject" type="text" /
+                  = f.text_field :subject, class: 'form-control', placeholder: 'Subject', type: 'text'
               .row
                 .col-sm-12
-                  textarea.form-control name="message" placeholder=("Enter your message ...")
-              button.btn.btn-default.btn-submit type="submit"  Submit message
+                  = f.text_area :message, class: 'form-control', placeholder: 'Enter your message ...', type: 'text'
+              = f.button "Submit message", type: 'submit', class: 'btn btn-default btn-submit', name: 'Submit'
             #response
           .col-sm-6.outer-top-md.inner-left-sm.border-left
             h2 Contact

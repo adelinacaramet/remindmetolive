@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get '/contact', to: 'home#contact'
+  post '/contact', to: 'home#send_contact'
   get '/about', to: 'home#about'
 
   get '/stories', to: 'categories#stories'
