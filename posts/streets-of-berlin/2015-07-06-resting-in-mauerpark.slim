@@ -1,0 +1,34 @@
+.container.inner-top-sm.inner-bottom.classic-blog.no-sidebar
+  .row
+    .col-md-9.center-block
+      .sidemeta
+        .post.format-gallery
+          .date-wrapper
+            .date
+              span.day 07
+              span.month July
+          .format-wrapper
+            a href="#"
+              i.icon-picture
+          .post-content
+            figure.post-media
+              img alt="" src="https://farm1.staticflickr.com/405/19440673036_d9addedef2_h.jpg" /
+            p.author
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by Ade
+            h1.post-title Resting in Mauerpark
+            ul.meta
+              li.categories
+                a href="#" Street Photography
+                | ,
+                a href="#" Berlin
+                | ,
+                a href="#" Portrait
+              li.comments
+                a href="" data-disqus-identifier="streets-of-berlin/resting-in-mauerpark" 0
+              li.likes
+                a href="#"  73
+            p
+              | We were walking around Mauerpark as it was a music festival there.
+                Looking around, I've seen an interesting guy, resting. I didn't hesitate, I took the camera
+                from Dan, and shoot this picture!
+            = render 'disqus', locals: { identifier: 'streets-of-berlin/resting-in-mauerpark', title: 'Streets Of Berlin - Resting in Mauerpark' }

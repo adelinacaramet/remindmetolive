@@ -3752,7 +3752,6 @@ input:focus:-ms-input-placeholder {
 }
 .meta li.categories:before,
 .meta li a:before {
-	content: "";
 	font-family: "fontello";
 	margin-right: 6px;
 }
@@ -3796,7 +3795,6 @@ input:focus:-ms-input-placeholder {
     margin-left: 12px;
 }
 .meta li:last-child:after {
-	content: "";
 }
 .classic-blog .sidemeta,
 .classic-blog .pagination {
