@@ -90,7 +90,8 @@ RSpec.describe Post, :type => :model do
                                              keywords: 'fun, wedding',
                                              category: 'stories',
                                              status: 'published',
-                                             layout: 'post'
+                                             layout: 'post',
+                                             publish_date: Date.strptime('2015-02-03', '%Y-%m-%d')
     end
   end
 

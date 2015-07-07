@@ -14,4 +14,12 @@ module ApplicationHelper
     return init if value.nil?
     value
   end
+
+  def publish_day post_meta
+    Post.publish_day post_meta
+  end
+
+  def publish_month post_meta
+    Post.publish_month post_meta
+  end
 end

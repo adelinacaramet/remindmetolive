@@ -10,6 +10,7 @@ FactoryGirl.define do
     category 'stories'
     keywords 'fun, wedding'
     status 'published'
+    publish_date '2015-02-03'
     layout 'post'
   end
 end

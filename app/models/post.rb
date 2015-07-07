@@ -12,7 +12,7 @@ class Post
 
       post_path = Rails.root.join('posts', "#{category}" , "#{post_meta.post_file_name}").to_s
       slim_template = Slim::Template.new(post_path)
-      post_html = slim_template.render(self)
+      post_html = slim_template.render(self, {post_meta: post_meta})
 
       post = Post.new html: post_html, post_meta: post_meta
     end
@@ -25,5 +25,13 @@ class Post
 
   def self.url_by_key category, url_key
     "/#{category}/#{url_key}.html"
+  end
+
+  def self.publish_day post_meta
+    post_meta.publish_date.day
+  end
+
+  def self.publish_month post_meta
+    post_meta.publish_date.strftime('%B').truncate(3, omission: '')
   end
 end
