@@ -26,5 +26,5 @@ section#blog.light-bg
                 ul.meta
                   li.categories
                     = render 'partials/tags', locals: { tags: post_meta.tags }
-                p
+                p #{post_meta.intro}
                 a.btn href="#{post_meta.url}"  Read more

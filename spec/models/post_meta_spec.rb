@@ -91,7 +91,8 @@ RSpec.describe Post, :type => :model do
                                              category: 'stories',
                                              status: 'published',
                                              layout: 'post',
-                                             publish_date: Date.strptime('2015-02-03', '%Y-%m-%d')
+                                             publish_date: Date.strptime('2015-02-03', '%Y-%m-%d'),
+                                             intro: 'This is the intro'
     end
   end
 

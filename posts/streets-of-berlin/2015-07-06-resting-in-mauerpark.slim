@@ -23,8 +23,5 @@
                 a href="" data-disqus-identifier="streets-of-berlin/resting-in-mauerpark" 0
               li.likes
                 a href="#"  73
-            p
-              | We were walking around Mauerpark as it was a music festival there.
-                Looking around, I've seen an interesting guy, resting. I didn't hesitate, I took the camera
-                from Dan, and shoot this picture!
+            p #{post_meta.intro}
             = render 'disqus', locals: { identifier: 'streets-of-berlin/resting-in-mauerpark', title: 'Streets Of Berlin - Resting in Mauerpark' }

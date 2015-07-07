@@ -12,5 +12,6 @@ FactoryGirl.define do
     status 'published'
     publish_date '2015-02-03'
     layout 'post'
+    intro 'This is the intro'
   end
 end

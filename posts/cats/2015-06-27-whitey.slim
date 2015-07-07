@@ -23,6 +23,5 @@
                 a href="" data-disqus-identifier="cats/whitey" 0
               li.likes
                 a href="#"  73
-            p
-              | Whitey is Cheetah's son
+            p #{post_meta.intro}
             = render 'disqus', locals: { identifier: 'cats/whitey', title: 'Cats - Whitey' }

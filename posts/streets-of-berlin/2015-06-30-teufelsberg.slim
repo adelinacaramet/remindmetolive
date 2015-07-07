@@ -23,8 +23,5 @@
                 a href="" data-disqus-identifier="streets-of-berlin/teufelsberg" 0
               li.likes
                 a href="#"  73
-            p
-              | I took this picture in a warm summer day, on a guided tour on Teufelsberg.
-                For the ones who don't know, Teufelsberg is a deserted radar.
-                Teufelsberg literaly translates from German to The Mountains of the Devil
+            p #{post_meta.intro}
             = render 'disqus', locals: { identifier: 'streets-of-berlin/teufelsberg', title: 'Streets Of Berlin - Teufelsberg' }

@@ -13,6 +13,7 @@ class PostMeta
   attribute :status, String
   attribute :layout, String
   attribute :publish_date, Date
+  attribute :intro, String
 
   # keys of the table are category and url_key
   def self.cached_published_post_metas_table
@@ -65,7 +66,8 @@ private
                                category: meta_hash['category'],
                                status: meta_hash['status'],
                                layout: meta_hash['layout'],
-                               publish_date: Date.strptime(meta_hash['publish_date'], '%Y-%m-%d')
+                               publish_date: Date.strptime(meta_hash['publish_date'], '%Y-%m-%d'),
+                               intro: meta_hash['intro']
   end
 
   def self.published_post_metas_table
