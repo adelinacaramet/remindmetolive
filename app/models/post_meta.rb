@@ -34,8 +34,10 @@ class PostMeta
   def self.published_for_category category
     published_for_category = cached_published_post_metas_table[category]
     return nil if published_for_category.nil?
-    # returns an array of PostMeta
-    published_for_category.values
+    # returns an array of PostMeta sorted by publish_date descending
+    Rails.cache.fetch("/published_post_metas_for_category/#{category}") do
+      published_for_category.values.sort_by {|item| item.publish_date}.reverse!
+    end
   end
 
 private
