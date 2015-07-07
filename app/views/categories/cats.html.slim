@@ -25,6 +25,6 @@ section#blog.light-bg
                   a href="#{post_meta.url}"  #{post_meta.title}
                 ul.meta
                   li.categories
-                    a href="#"  Photography
+                    = render 'partials/tags', locals: { tags: post_meta.tags }
                 p
                 a.btn href="#{post_meta.url}"  Read more

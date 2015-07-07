@@ -18,9 +18,7 @@
             h1.post-title Shumy Is One Year Old
             ul.meta
               li.categories
-                a href="#" Cat
-                | ,
-                a href="#" Pet
+                = render 'tags', locals: { tags: post_meta.tags }
               li.comments
                 a href="" data-disqus-identifier="cats/shumy-is-one-year-old" 0
               li.likes

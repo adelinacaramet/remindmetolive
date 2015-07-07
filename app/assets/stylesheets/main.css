@@ -3755,10 +3755,14 @@ input:focus:-ms-input-placeholder {
 	font-family: "fontello";
 	margin-right: 6px;
 }
+.meta li.categories:before {
+  content: "\e70d";
+}
 .meta li.categories a:before,
 .meta li.categories:before {
 	margin-right: 0;
 }
+
 /*.meta li.categories:before {
 	content: "\e70d";
 	-webkit-transition: all 200ms ease-out;

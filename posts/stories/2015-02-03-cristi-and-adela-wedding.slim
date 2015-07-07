@@ -9,7 +9,8 @@
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
       ul.item-details
         li.date May 23, 2014
-        li.categories Identity, Interactive, Print
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
         li.client Creative Startup
         li.url
           a href="http://demo.fuviz.com/reen"  demo.fuviz.com/reen

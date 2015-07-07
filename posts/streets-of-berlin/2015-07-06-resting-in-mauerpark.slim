@@ -18,11 +18,7 @@
             h1.post-title Resting in Mauerpark
             ul.meta
               li.categories
-                a href="#" Street Photography
-                | ,
-                a href="#" Berlin
-                | ,
-                a href="#" Portrait
+                = render 'tags', locals: { tags: post_meta.tags }
               li.comments
                 a href="" data-disqus-identifier="streets-of-berlin/resting-in-mauerpark" 0
               li.likes
