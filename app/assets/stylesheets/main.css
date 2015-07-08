@@ -959,8 +959,8 @@ footer .row .inner {
 }
 footer .logo {
 	height: auto;
-	max-height: 80%;
-  max-width: 80%;
+	max-height: 50%;
+  max-width: 50%;
 }
 footer h4 {
 	text-transform: uppercase;
@@ -5835,8 +5835,4 @@ a.changecolor {
 
 .navbar .navbar-brand img {
 	-skrollr-animation-name: shrink-logo;
-}
-
-.black-border {
-  text-shadow: -1px 0 #888888, 0 1px #888888, 1px 0 #888888, 0 -1px #888888;
 }
