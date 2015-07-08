@@ -5836,3 +5836,7 @@ a.changecolor {
 .navbar .navbar-brand img {
 	-skrollr-animation-name: shrink-logo;
 }
+
+.black-border {
+  text-shadow: -1px 0 #888888, 0 1px #888888, 1px 0 #888888, 0 -1px #888888;
+}
