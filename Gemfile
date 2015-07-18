@@ -19,6 +19,10 @@ gem 'virtus'
 #gem 'debug_inspector'
 #gem 'binding_of_caller'
 
+# profiler
+gem 'rack-mini-profiler', require: false
+gem 'flamegraph'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 
