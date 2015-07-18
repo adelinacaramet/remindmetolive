@@ -50,6 +50,9 @@ The tests will run automatically as soon as you change a file
 
 ## Profiling
 
+For profiling we are using [Rack Mini Profiler](https://github.com/MiniProfiler/rack-mini-profiler)
+We are using [flamegraph](https://github.com/SamSaffron/flamegraph) also
+
 In development mode the profiler data will appear in the upper left corner
 Click on the number for more information
 For a flamegraph, use `?pp=flamegraph` in the urls
