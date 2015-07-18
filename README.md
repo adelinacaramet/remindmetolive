@@ -47,3 +47,9 @@ For faster tests:
 The tests will run automatically as soon as you change a file
 
 [This](http://girders.org/blog/2014/02/06/setup-rails-41-spring-rspec-and-guard/) article was really helpful on setting this up.
+
+## Profiling
+
+In development mode the profiler data will appear in the upper left corner
+Click on the number for more information
+For a flamegraph, use `?pp=flamegraph` in the urls
