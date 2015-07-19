@@ -1,5 +1,7 @@
 == README
 
+[![Build Status](https://travis-ci.org/adelinacaramet/remindmetolive.svg?branch=master)](https://travis-ci.org/adelinacaramet/remindmetolive)
+
 ## Rake tasks:
 
     rake sitemap:refresh
