@@ -1976,6 +1976,10 @@ p .btn {
     background: #00ACED;
     background: #2FBBED;
 }
+.social a .icon-s-instagram:after {
+    background: #FFFFFF;
+    background: #517fa4;
+}
 .social a .icon-s-pinterest:after {
     background: #CB2027;
     background: #D94348;
