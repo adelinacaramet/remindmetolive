@@ -36,8 +36,6 @@ group :development, :test do
   gem 'spring'
   gem 'factory_girl_rails'
 
-  gem 'sitemap_generator'
-
   # these 3 gems are for faster testing
   gem 'spring-commands-rspec'
   gem 'guard-rspec'
