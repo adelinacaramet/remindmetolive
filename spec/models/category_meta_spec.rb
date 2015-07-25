@@ -38,8 +38,8 @@ RSpec.describe CategoryMeta, :type => :model do
     end
 
     it 'should have the correct titles' do
-      expect(subject[0].title).to eq 'Cats'
-      expect(subject[1].title).to eq 'Photo Stories'
+      expect(subject['cats'].title).to eq 'Cats'
+      expect(subject['stories'].title).to eq 'Photo Stories'
     end
   end
 

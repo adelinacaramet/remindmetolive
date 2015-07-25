@@ -110,9 +110,6 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    passenger (5.0.14)
-      rack
-      rake (>= 0.8.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -233,7 +230,6 @@ DEPENDENCIES
   flamegraph
   guard-rspec
   jquery-rails
-  passenger
   rack-mini-profiler
   rails (= 4.2.3)
   rb-fsevent
