@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < BasicAuthController
 
   def show
     category = params[:category]

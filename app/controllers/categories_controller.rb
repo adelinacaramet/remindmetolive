@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class CategoriesController < BasicAuthController
 
   def stories
     @post_metas = PostMeta.published_for_category 'stories'
