@@ -55,19 +55,19 @@ private
   def self.parse_meta_file meta_path
     meta_hash = Hash[File.read(meta_path).split("\n").map{|i|i.split(': ')}]
     tags = extract_tags meta_hash['tags']
-    post_meta = PostMeta.new title: meta_hash['title'],
-                               picture_url: meta_hash['picture_url'],
-                               url: Post.url_by_key(meta_hash['category'], meta_hash['url_key']),
-                               description: meta_hash['description'],
-                               url_key: meta_hash['url_key'],
-                               post_file_name: meta_hash['post_file_name'],
-                               tags: tags,
-                               keywords: meta_hash['keywords'],
-                               category: meta_hash['category'],
-                               status: meta_hash['status'],
-                               layout: meta_hash['layout'],
-                               publish_date: Date.strptime(meta_hash['publish_date'], '%Y-%m-%d'),
-                               intro: meta_hash['intro']
+    PostMeta.new title: meta_hash['title'],
+                 picture_url: meta_hash['picture_url'],
+                 url: Post.url_by_key(meta_hash['category'], meta_hash['url_key']),
+                 description: meta_hash['description'],
+                 url_key: meta_hash['url_key'],
+                 post_file_name: meta_hash['post_file_name'],
+                 tags: tags,
+                 keywords: meta_hash['keywords'],
+                 category: meta_hash['category'],
+                 status: meta_hash['status'],
+                 layout: meta_hash['layout'],
+                 publish_date: Date.strptime(meta_hash['publish_date'], '%Y-%m-%d'),
+                 intro: meta_hash['intro']
   end
 
   def self.published_post_metas_table

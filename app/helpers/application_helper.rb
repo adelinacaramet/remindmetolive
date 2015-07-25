@@ -1,11 +1,15 @@
 module ApplicationHelper
 
   def title
-    meta_field :title, 'Visual Stories'
+    meta_field :title, 'Remindmetolive'
   end
 
   def description
     meta_field :description, 'Best site'
+  end
+
+  def keywords
+    meta_field :keywords, ''
   end
 
   def meta_field(field, init = '')

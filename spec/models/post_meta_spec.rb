@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Post, :type => :model do
+RSpec.describe PostMeta, :type => :model do
 
   before do
     post_meta = build(:post_meta)
@@ -104,11 +104,11 @@ RSpec.describe Post, :type => :model do
 
     subject { PostMeta.all_published }
 
-    it 'should return one post meta' do
+    it 'should have one post meta' do
       expect(subject.size).to eq 1
     end
 
-    it 'should return the correct post meta' do
+    it 'should have the correct post meta' do
       expect(subject.first.title).to eq 'Published Story'
     end
   end
@@ -137,7 +137,7 @@ RSpec.describe Post, :type => :model do
 
     subject { PostMeta.post_meta_paths }
 
-    it 'should return post meta paths' do
+    it 'should have some post meta paths' do
       is_expected.not_to be_empty
     end
   end
