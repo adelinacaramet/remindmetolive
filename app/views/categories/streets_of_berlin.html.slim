@@ -4,7 +4,7 @@ section#portfolio
       .col-md-8.col-sm-9.center-block.text-center
         header
           h1 On The Streets Of Berlin
-          p Interesting people! Great portraits! Candid photographs! Decisive moment! All on the streets of Berlin!
+          p Interesting people! Great portraits! Candid photos! Decisive moment! All on the streets of Berlin!
 
 section#blog.light-bg
   .container.inner-top-sm.inner-bottom.classic-blog.no-sidebar
@@ -20,7 +20,7 @@ section#blog.light-bg
               .post-content
                 figure.icn-link.post-media
                   a href="#{post_meta.url}"
-                    img alt="" src="#{post_meta.picture_url}"
+                    img alt="" src="#{image_url(post_meta.picture_url, image_path(post_meta))}"
                 h2.post-title
                   a href="#{post_meta.url}"  #{post_meta.title}
                 ul.meta

@@ -18,7 +18,7 @@ section#portfolio
               figure
                 .icon-overlay.icn-link
                   a href="#{post_meta.url}"
-                    img alt="" src="#{post_meta.picture_url}" /
+                    img alt="" src="#{image_url(post_meta.picture_url, image_path(post_meta))}" /
                 figcaption.bordered.no-top-border
                   .info
                     h4

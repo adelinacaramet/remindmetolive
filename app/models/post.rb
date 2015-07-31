@@ -2,6 +2,7 @@ require 'slim'
 
 class Post
   include Virtus.model
+  include UrlHelper
 
   attribute :html, String
   attribute :post_meta, PostMeta
@@ -12,7 +13,7 @@ class Post
 
       post_path = Rails.root.join('posts', "#{category}" , "#{post_meta.post_file_name}").to_s
       slim_template = Slim::Template.new(post_path)
-      post_html = slim_template.render(self, {post_meta: post_meta})
+      post_html = slim_template.render(self, {post_meta: post_meta, image_path: image_path(post_meta)})
 
       post = Post.new html: post_html, post_meta: post_meta
     end

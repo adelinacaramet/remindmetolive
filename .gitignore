@@ -18,5 +18,6 @@
 
 **/.DS_Store
 /public/assets/*
+/public/images/*
 
 /vendor/*

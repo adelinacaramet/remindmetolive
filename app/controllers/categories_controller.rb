@@ -1,5 +1,7 @@
 class CategoriesController < BasicAuthController
 
+  include UrlHelper
+
   def stories
     @post_metas = PostMeta.published_for_category 'stories'
     @meta = CategoryMeta.for_category 'stories'

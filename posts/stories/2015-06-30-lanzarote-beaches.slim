@@ -1,4 +1,4 @@
-.img-bg.height-sm.border-bottom style=("background-image: url(https://farm9.staticflickr.com/8773/17828177126_8c7ab1c8e0_h.jpg);")
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser1.jpg', image_path)});")
 .container.inner-top
   .row
     .col-sm-9.center-block.text-center
@@ -21,19 +21,19 @@
       h2.text-center The Papagayo Beach
       p On top of our list was Papagayo, the most well known of all the beaches around Playa Blanca. The beach is hidden away in an area of volcanic hills, therefore the road to the beach was full of adventure. We were lost of couple of times and ended up taking a rather bumpy dirt road. It certainly worth it, because when we arrived at the beach we understood why it was so hard to reach it. Papagayo, with its fine, pale golden sand and crystal-clear waters, sheltered by cliffs, is said by many to be the most beautiful beach in Lanzarote.
 
-  = render 'one_picture', locals: { picture_url: 'https://farm9.staticflickr.com/8759/17552331103_dccfa973ea_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image1.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm6.staticflickr.com/5327/17855001331_7465103a27_b.jpg', 'https://farm6.staticflickr.com/5445/17854522445_00643d00eb_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image2.jpg', image_path), image_url('image3.jpg', image_path) ] }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm6.staticflickr.com/5467/17666979640_30595b8f88_b.jpg', 'https://farm6.staticflickr.com/5469/17855001151_6f551acc90_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image4.jpg', image_path), image_url('image5.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm6.staticflickr.com/5343/17854522765_2f00749c6c_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image6.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm6.staticflickr.com/5335/17854521765_c902138e85_b.jpg', 'https://farm8.staticflickr.com/7749/17231992824_86a648fb76_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image7.jpg', image_path), image_url('image8.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm6.staticflickr.com/5332/17666979350_f8153ca23d_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image9.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm6.staticflickr.com/5457/17234115503_37c5d2e84b_b.jpg', 'https://farm9.staticflickr.com/8846/17666705208_2c56217d6e_h.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image10.jpg', image_path), image_url('image11.jpg', image_path) ] }
 
 
 
@@ -43,15 +43,15 @@
 
       p On the northwest coast of the island, away from the resorts, it's Famara beach, a 3 km long stretch of sand and dunes. It’s a beautiful and unique landscape because it borders with a mountain on one side. Pedro Almodóvar chose this dramatic setting to shoot some key scenes of his last film, Broken Embraces. It's also the perfect playground for surfers of all types. It’s hard not to mark this place as your favourite.
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7672/17668252589_27198f195b_b.jpg', 'https://farm8.staticflickr.com/7746/18173956131_b93d434c40_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image12.jpg', image_path), image_url('image13.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm6.staticflickr.com/5465/17666973350_b9db62fe4e_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image14.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm9.staticflickr.com/8794/17231986614_c7276a1755_b.jpg', 'https://farm9.staticflickr.com/8769/17550192034_fccbcdecd1_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image15.jpg', image_path), image_url('image16.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm6.staticflickr.com/5452/17666699168_c65366b279_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image17.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm9.staticflickr.com/8792/17854517275_890a46c082_b.jpg', 'https://farm9.staticflickr.com/8893/17854995441_e762ba6612_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image18.jpg', image_path), image_url('image19.jpg', image_path) ] }
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
@@ -59,14 +59,14 @@
 
       p Lanzarote emerged from the sea as a result of volcanic activity, but only a few of its beaches have black sand.
 
-  = render 'one_picture', locals: { picture_url: 'https://farm6.staticflickr.com/5443/17668262789_414dd85fe2_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image20.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm9.staticflickr.com/8862/17232010064_98861aef55_b.jpg', 'https://farm8.staticflickr.com/7780/17854538995_4b1d4181e1_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image21.jpg', image_path), image_url('image22.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm9.staticflickr.com/8814/17234121003_fe990374af_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image23.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ 'https://farm9.staticflickr.com/8814/17234121003_a442e2e8f5_b.jpg', 'https://farm6.staticflickr.com/5469/17666997540_8274f1b115_b.jpg' ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image24.jpg', image_path), image_url('image25.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: 'https://farm9.staticflickr.com/8842/17231985904_aca29b52c7_h.jpg' }
+  = render 'one_picture', locals: { picture_url: image_url('image26.jpg', image_path) }
 
   = render 'disqus', locals: { identifier: 'stories/lanzarote-beaches', title: 'Stories - Lanzarote Beaches' }
