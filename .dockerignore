@@ -6,3 +6,4 @@ tmp/*
 Dockerfile
 README.rdoc
 vendor/*
+public/images/*
