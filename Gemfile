@@ -20,6 +20,8 @@ gem 'virtus'
 # profiler
 gem 'rack-mini-profiler', require: false
 gem 'flamegraph'
+# monitoring
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
