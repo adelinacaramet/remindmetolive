@@ -8,7 +8,7 @@
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
       ul.item-details
-        li.date May 23, 2014
+        li.date #{publish_month post_meta} #{publish_day post_meta}
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
