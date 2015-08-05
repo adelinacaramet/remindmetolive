@@ -81,6 +81,7 @@ RSpec.describe PostMeta, :type => :model do
 
     it 'should contain the correct attributes' do
       expect(subject.first.attributes).to eq title: "Cristi and Adela Wedding",
+                                             author: "Dan",
                                              picture_url: 'https://farm4.staticflickr.com/3940/15084169773_53497cc18a_n.jpg',
                                              url: '/stories/cristi-and-adela-wedding.html',
                                              description: 'The best wedding ever',

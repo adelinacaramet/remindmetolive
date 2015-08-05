@@ -21,7 +21,9 @@ section#blog.light-bg
                 figure.icn-link.post-media
                   a href="#{post_meta.url}"
                     img alt="" src="#{image_url(post_meta.picture_url, image_path(post_meta))}"
-                h2.post-title
+                p.author
+                  a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by #{post_meta.author}
+                h1.post-title
                   a href="#{post_meta.url}"  #{post_meta.title}
                 ul.meta
                   li.categories

@@ -2,6 +2,7 @@ class PostMeta
   include Virtus.model
 
   attribute :title, String
+  attribute :author, String
   attribute :picture_url, String
   attribute :url, String
   attribute :description, String
@@ -56,6 +57,7 @@ private
     meta_hash = Hash[File.read(meta_path).split("\n").map{|i|i.split(': ')}]
     tags = extract_tags meta_hash['tags']
     PostMeta.new title: meta_hash['title'],
+                 author: meta_hash['author'],
                  picture_url: meta_hash['picture_url'],
                  url: Post.url_by_key(meta_hash['category'], meta_hash['url_key']),
                  description: meta_hash['description'],

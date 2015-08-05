@@ -11,9 +11,9 @@
         li.date May 23, 2014
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
-        li.client Creative Startup
         li.url
-          a href="http://demo.fuviz.com/reen"  demo.fuviz.com/reen
+          a href="https://en.wikipedia.org/wiki/wedding"  Wedding
+        li.client by #{post_meta.author}
 
   = render 'two_pictures', locals: { picture_urls: [ 'https://farm8.staticflickr.com/7495/15518330677_a39053c054_z.jpg', 'https://farm4.staticflickr.com/3950/15084170333_1dc430b50e_z.jpg' ] }
 
