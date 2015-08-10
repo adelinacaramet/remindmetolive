@@ -22,6 +22,8 @@ gem 'rack-mini-profiler', require: false
 gem 'flamegraph'
 # monitoring
 gem 'newrelic_rpm'
+gem 'stackprof'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
