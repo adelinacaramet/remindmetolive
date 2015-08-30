@@ -1,5 +1,5 @@
 /*!
- * viewport-units-buggyfill v0.4.2
+ * viewport-units-buggyfill v0.5.4
  * @web: https://github.com/rodneyrehm/viewport-units-buggyfill/
  * @author: Rodney Rehm - http://rodneyrehm.de/en/
  */
@@ -20,7 +20,7 @@
   }
 }(this, function () {
   'use strict';
-  /*global document, window, location, XMLHttpRequest, XDomainRequest*/
+  /*global document, window, navigator, location, XMLHttpRequest, XDomainRequest*/
 
   var initialized = false;
   var options;
@@ -30,13 +30,23 @@
   var dimensions;
   var declarations;
   var styleNode;
-  var isOldInternetExplorer = false;
+  var isBuggyIE = /MSIE [0-9]\./i.test(userAgent);
+  var isOldIE = /MSIE [0-8]\./i.test(userAgent);
   var isOperaMini = userAgent.indexOf('Opera Mini') > -1;
+
   var isMobileSafari = /(iPhone|iPod|iPad).+AppleWebKit/i.test(userAgent) && (function() {
-    // viewport units work fine in mobile Safari on iOS 8+
-    var versions = /Version\/(\d+)/.exec(window.navigator.userAgent);
-    return versions.length > 1 && parseInt(versions[1]) < 8;
+    // Regexp for iOS-version tested against the following userAgent strings:
+    // Example WebView UserAgents:
+    // * iOS Chrome on iOS8: "Mozilla/5.0 (iPad; CPU OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) CriOS/39.0.2171.50 Mobile/12B410 Safari/600.1.4"
+    // * iOS Facebook on iOS7: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D201 [FBAN/FBIOS;FBAV/12.1.0.24.20; FBBV/3214247; FBDV/iPhone6,1;FBMD/iPhone; FBSN/iPhone OS;FBSV/7.1.1; FBSS/2; FBCR/AT&T;FBID/phone;FBLC/en_US;FBOP/5]"
+    // Example Safari UserAgents:
+    // * Safari iOS8: "Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/600.1.3 (KHTML, like Gecko) Version/8.0 Mobile/12A4345d Safari/600.1.4"
+    // * Safari iOS7: "Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A4449d Safari/9537.53"
+    var iOSversion = userAgent.match(/OS (\d)/);
+    // viewport units work fine in mobile Safari and webView on iOS 8+
+    return iOSversion && iOSversion.length>1 && parseInt(iOSversion[1]) < 8;
   })();
+
   var isBadStockAndroid = (function() {
     // Android stock browser test derived from
     // http://stackoverflow.com/questions/24926221/distinguish-android-chrome-from-stock-browser-stock-browsers-user-agent-contai
@@ -56,18 +66,10 @@
     return versionNumber <= 4.4;
   })();
 
-  // Do not remove the following comment!
-  // It is a conditional comment used to
-  // identify old Internet Explorer versions
-
-  /*@cc_on
-
-  @if (@_jscript_version <= 10)
-    isOldInternetExplorer = true;
-  @end
-
-  @*/
-
+  // added check for IE11, since it *still* doesn't understand vmax!!!
+  if (!isBuggyIE) {
+    isBuggyIE = !!navigator.userAgent.match(/Trident.*rv[ :]*11\./);
+  }
   function debounce(func, wait) {
     var timeout;
     return function() {
@@ -106,9 +108,15 @@
     options.isMobileSafari = isMobileSafari;
     options.isBadStockAndroid = isBadStockAndroid;
 
-    if (!options.force && !isMobileSafari && !isOldInternetExplorer && !isBadStockAndroid && !isOperaMini && (!options.hacks || !options.hacks.required(options))) {
+    if (isOldIE || (!options.force && !isMobileSafari && !isBuggyIE && !isBadStockAndroid && !isOperaMini && (!options.hacks || !options.hacks.required(options)))) {
       // this buggyfill only applies to mobile safari, IE9-10 and the Stock Android Browser.
-      return;
+      if (window.console && isOldIE) {
+        console.info('viewport-units-buggyfill requires a proper CSSOM and basic viewport unit support, which are not available in IE8 and below');
+      }
+
+      return {
+        init: function () {}
+      };
     }
 
     options.hacks && options.hacks.initialize(options);
@@ -128,7 +136,7 @@
       // orientationchange might have happened while in a different window
       window.addEventListener('pageshow', _refresh, true);
 
-      if (options.force || isOldInternetExplorer || inIframe()) {
+      if (options.force || isBuggyIE || inIframe()) {
         window.addEventListener('resize', _refresh, true);
         options._listeningToResize = true;
       }
@@ -141,6 +149,8 @@
 
   function updateStyles() {
     styleNode.textContent = getReplacedViewportUnits();
+    // move to the end in case inline <style>s were added dynamically
+    styleNode.parentNode.appendChild(styleNode);
   }
 
   function refresh() {
@@ -160,8 +170,8 @@
   function findProperties() {
     declarations = [];
     forEach.call(document.styleSheets, function(sheet) {
-      if (sheet.ownerNode.id === 'patched-viewport' || !sheet.cssRules) {
-        // skip entire sheet because no rules ara present or it's the target-element of the buggyfill
+      if (sheet.ownerNode.id === 'patched-viewport' || !sheet.cssRules || sheet.ownerNode.getAttribute('data-viewport-units-buggyfill') === 'ignore') {
+        // skip entire sheet because no rules are present, it's supposed to be ignored or it's the target-element of the buggyfill
         return;
       }
 
@@ -215,6 +225,11 @@
 
     forEach.call(rule.style, function(name) {
       var value = rule.style.getPropertyValue(name);
+      // preserve those !important rules
+      if (rule.style.getPropertyPriority(name)) {
+        value += ' !important';
+      }
+
       viewportUnitExpression.lastIndex = 0;
       if (viewportUnitExpression.test(value)) {
         declarations.push([rule, name, value]);
@@ -333,8 +348,8 @@
     };
 
     forEach.call(document.styleSheets, function(sheet) {
-      if (!sheet.href || origin(sheet.href) === origin(location.href)) {
-        // skip <style> and <link> from same origin
+      if (!sheet.href || origin(sheet.href) === origin(location.href) || sheet.ownerNode.getAttribute('data-viewport-units-buggyfill') === 'ignore') {
+        // skip <style> and <link> from same origin or explicitly declared to ignore
         return;
       }
 
@@ -382,7 +397,7 @@
   }
 
   return {
-    version: '0.4.2',
+    version: '0.5.4',
     findProperties: findProperties,
     getCss: getReplacedViewportUnits,
     init: initialize,
