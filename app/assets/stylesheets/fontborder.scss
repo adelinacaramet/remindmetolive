@@ -21,9 +21,9 @@
 }
 
 .stroke-1 {
-  @include stroke(1,#888888);
+  @include stroke(1, rgba(136, 136, 136, 0.1));
 }
 
 .stroke-2 {
-  @include stroke(2,#888888);
+  @include stroke(2, rgba(136, 136, 136, 0.1));
 }

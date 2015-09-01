@@ -763,49 +763,49 @@ iframe + iframe {
 	z-index: 0;
 }
 .green-bg {
-    background-color: #1ABB9C !important;
+    background: rgba(26,187,156) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .blue-bg {
-    background-color: #3F8DBF !important;
+    background: rgba(63,141,191, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .red-bg {
-    background-color: #FA6C65 !important;
+    background: rgba(250,108,101, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .orange-bg {
-    background-color: #F27A24 !important;
+    background: rgba(242,122,36, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .purple-bg {
-    background-color: #9B59B6 !important;
+    background: rgba(155,89,182, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .pink-bg {
-    background-color: #D487BE !important;
+    background: rgba(212,135,190, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .navy-bg {
-    background-color: #34495E !important;
+  background-color: rgba(52,73,94, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .gray-bg {
-    background-color: #95A5A6 !important;
+    background: rgba(149,165,166, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
@@ -814,7 +814,7 @@ iframe + iframe {
     background-color: #F2F5F7;
 }
 .dark-bg {
-    background-color: #2F4052;
+    background-color: #1A1437;
 }
 .dark-bg,
 .dark-bg p,
@@ -987,7 +987,7 @@ footer p {
     display: none;
 }
 .footer-bottom {
-    background: #283645;
+    background: #1e0931;
 	color: #707E8C;
 }
 .footer-bottom .container.inner {
