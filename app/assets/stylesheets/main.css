@@ -763,37 +763,37 @@ iframe + iframe {
 	z-index: 0;
 }
 .green-bg {
-    background: rgba(26,187,156) !important;
+  background: rgba(26,187,156, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .blue-bg {
-    background: rgba(63,141,191, 0.6) !important;
+  background: rgba(63,141,191, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .red-bg {
-    background: rgba(250,108,101, 0.6) !important;
+  background: rgba(250,108,101, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .orange-bg {
-    background: rgba(242,122,36, 0.6) !important;
+  background: rgba(242,122,36, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .purple-bg {
-    background: rgba(155,89,182, 0.6) !important;
+  background: rgba(155,89,182, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
 }
 .pink-bg {
-    background: rgba(212,135,190, 0.6) !important;
+  background: rgba(212,135,190, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
@@ -805,7 +805,7 @@ iframe + iframe {
 	margin-top: -2px;
 }
 .gray-bg {
-    background: rgba(149,165,166, 0.6) !important;
+  background: rgba(149,165,166, 0.6) !important;
 	color: #FFF !important;
 	padding: 2px 8px 4px;
 	margin-top: -2px;
