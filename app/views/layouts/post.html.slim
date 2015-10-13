@@ -1,6 +1,6 @@
 = content_for :content do
   section#portfolio-post
     = content_for?(:story_content) ? yield(:story_content) : yield
-    div.end-story-logo
+    .end-story-logo
         img.end-story-image alt="" src="/assets/cocos.png"
 = render template: 'layouts/application'
