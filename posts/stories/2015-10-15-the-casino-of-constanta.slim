@@ -4,7 +4,7 @@
     .col-sm-9.center-block.text-center
       header
         h1 The Casino Of Constanta
-        p The Casino, the landmark of my hometown, Constanta, once an animated building hosting joyful events and gamblers from all over the world, is now a ruin.
+        p <a href="https://en.wikipedia.org/wiki/Constan%C8%9Ba_Casino" target="_blank">The Casino</a>, the landmark of my hometown, Constanta, once an animated building hosting joyful events and gamblers from all over the world, is now a ruin.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -13,7 +13,7 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Constan%C8%9Ba"  Berlin
+          a href="https://en.wikipedia.org/wiki/Constan%C8%9Ba"  Constanta, Romania
         li.client by #{post_meta.author}
         = render 'like_button'
 
@@ -50,7 +50,7 @@
 
       h2.text-center 2002
 
-      p I'm 17 and together with another colleague, we are skipping classes. After getting the traditional Giant Shaorma from the Tomis Port, we are heading towards the Casino. The building doesn't look too good, but we don't care. We are young the only thing that matters for us is that the Casino has a pool table. We are making the effort to walk such a huge distance onlyh because this the cheapest place in town where we can play pool. We are getting inside in the left wing of the Casino and the first thing I notice is the smoke smell impregnated in the walls. We are the only clients there. There is a bar and lots of alchohol bottles on the walls of the bar but we don't drink. The pool table is really old, the cues are old as well, we are barely able to play. After half an hour we get pissed and leave.
+      p I'm 17 and together with a colleague we are skipping classes. After getting the traditional Giant Shaorma from the Tomis Port, we are heading towards the Casino. The building doesn't look that pretty, but we don't care. We are young and the only thing that matters is that the Casino has a pool table. We make the effort to walk such a huge distance because this the cheapest place in town where we can play pool. We are getting inside the left wing of the Casino and the first thing I notice is the smell of smoke emanating from the walls. We are the only clients here. There is a bar with lots of alchohol bottles, but we don't drink. The pool table is really old, the cues are old as well and we are barely able to play. After half an hour we get pissed and leave.
 
   = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
 
@@ -60,16 +60,14 @@
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-18-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-34-1200.jpg', image_path) }
-
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
 
       h2.text-center 2015
 
-      p I'm back in my old hometown for a few days and now I'm heading towards the Casino to take some pictures of it. I already know that it's a ruin now and I want to take some pictures of it before they renovate it. This is of course, a joke, as nobody has any plan to do it. They promised many years in a row to renovate it, but until now they didn't do anything.
+      p I'm back in my hometown for a few days and now I'm heading towards the old Casino. I already know that it's a ruin and I want to take some pictures of it before they renovate it. This is of course, a joke, as nobody has any plan to do it. They promised many years in a row to renovate it, but nobody did anything.
 
-      p Getting closer and closer to the seafront, I'm starting to notice the smell. Strong and salty like always! I finally feel like home! The Casino is indeed a ruin, lots of people are walking around it, many taking pictures and selfies. There is no orchestra, like in the glorious days, 100 years ago. Instead an accordionist together with his cat is entertaining everybody who passes by and everybody seems to be happy. I'm happy too!
+      p Getting closer and closer to the seafront, I'm starting to notice the smell, strong and salty like always! It finally feels like home! The Casino is indeed a ruin, lots of people are walking around it, many taking pictures and selfies. There is no orchestra, like in the glorious days, 100 years ago. Instead an accordionist together with his cat is trying to cheer up everybody who passes by. A nostalgic feeling fills my heart.
 
   = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
 
@@ -83,4 +81,4 @@
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-28-800.jpg', image_path), image_url('image-26-800.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: image_url('teaser-03-1600.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-34-1200.jpg', image_path) }
