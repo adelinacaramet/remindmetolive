@@ -1,0 +1,21 @@
+.container.inner-top-sm.inner-bottom.classic-blog.no-sidebar
+  .row
+    .col-md-9.center-block
+      .sidemeta
+        .post.format-gallery
+          .date-wrapper
+            .date
+              span.day #{publish_day post_meta}
+              span.month #{publish_month post_meta}
+          .post-content
+            figure.post-media
+              img alt="" src="#{image_url 'image-portrait-01-1200.jpg', image_path}" /
+            p.author
+              a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by #{post_meta.author}
+            h1.post-title Surprised in the Park
+            ul.meta
+              li.categories
+                = render 'tags', locals: { tags: post_meta.tags }
+              = render 'like_button'
+            p #{post_meta.intro}
+            = render 'blog_rrssb', locals: { share_url: url(post_meta) }
