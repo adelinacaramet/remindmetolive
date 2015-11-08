@@ -18,3 +18,4 @@
                 = render 'tags', locals: { tags: post_meta.tags }
               = render 'like_button'
             p #{post_meta.intro}
+            = render 'blog_rrssb', locals: { share_url: url(post_meta) }

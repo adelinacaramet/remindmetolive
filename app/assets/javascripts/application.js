@@ -23,5 +23,6 @@
 //= require jquery.isotope.min
 //= require jquery.easytabs.min
 //= require viewport-units-buggyfill
+//= require rrssb
 //= require facebook
 //= require scripts

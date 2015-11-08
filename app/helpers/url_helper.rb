@@ -13,6 +13,10 @@ module UrlHelper
     "#{post_meta.category}/#{post_meta.publish_date.strftime("%F")}-#{post_meta.url_key}"
   end
 
+  def url post_meta
+    "http://www.remindmetolive.com/#{post_meta.category}/#{post_meta.url_key}.html"
+  end
+
   def self.included(base)
     base.extend UrlHelper
   end

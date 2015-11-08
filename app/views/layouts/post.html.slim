@@ -1,6 +1,9 @@
 = content_for :content do
   section#portfolio-post
     = content_for?(:story_content) ? yield(:story_content) : yield
+    .row.inner-top-sm
+      .col-md-7.col-sm-8.center-block
+        = render partial: 'partials/rrssb', locals: { share_url: url(@post.post_meta) }
     .end-story-logo
-        img.end-story-image alt="" src="/assets/cocos.png"
+      img.end-story-image alt="" src="/assets/cocos.png"
 = render template: 'layouts/application'
