@@ -12,7 +12,7 @@
               img alt="" src="#{image_url 'image.jpg', image_path}" /
             p.author
               a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by #{post_meta.author}
-            h1.post-title Resting in Mauerpark
+            h1.post-title #{post_meta.title}
             ul.meta
               li.categories
                 = render 'tags', locals: { tags: post_meta.tags }

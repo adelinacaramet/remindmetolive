@@ -9,7 +9,7 @@
               span.month #{publish_month post_meta}
           .post-content
             figure.post-media
-              img alt="" src="#{image_url 'image-portrait-01-1200.jpg', image_path}" /
+              img alt="" src="#{image_url 'image-01-1200.jpg', image_path}" /
             p.author
               a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by #{post_meta.author}
             h1.post-title #{post_meta.title}
@@ -18,4 +18,12 @@
                 = render 'tags', locals: { tags: post_meta.tags }
               = render 'like_button'
             p #{post_meta.intro}
+            p  The lake acting like a mirror symbolises a moment of deep spiritual reflection.
+            p
+            i.center-block.text-center And since you know you cannot see yourself
+            i.center-block.text-center So well as by reflection, I your glass
+            i.center-block.text-center Will modestly discover to yourself
+            i.center-block.text-center That of yourself which you yet know not of.
+            p
+            i.pull-right – William Shakespeare (Julius Caesar)
             = render 'blog_rrssb', locals: { share_url: url(post_meta) }
