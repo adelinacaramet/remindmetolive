@@ -9,7 +9,7 @@
               span.month #{publish_month post_meta}
           .post-content
             figure.post-media
-              img alt="" src="#{image_url 'image.jpg', image_path}" /
+              img alt="" src="#{image_url 'image-01-2048.jpg', image_path}" /
             p.author
               a data-placement="left" data-rel="tooltip" href="#" title=("Post author") by #{post_meta.author}
             h1.post-title #{post_meta.title}
@@ -18,7 +18,6 @@
                 = render 'tags', locals: { tags: post_meta.tags }
               = render 'like_button'
             p #{post_meta.intro}
-            p
-              | I took this picture on her 1st birthday. She was acting like a princess, as always, and on that day we spoiled her
-                more than usual.
+            p Lucy is <a href="/cats/shumy-is-one-year-old.html">Shumy</a>'s mother. She's a real British Short Hair cat.
+            p I took this picture two years ago, on the Christmas Day, one year before Shumy was born.
             = render 'blog_rrssb', locals: { share_url: url(post_meta) }
