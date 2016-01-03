@@ -1,0 +1,84 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-01-1600.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 New Year in Salzburg
+        p Salzburg is cool. The Intro
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Salzburg"  Salzburg, Austria
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+
+      h2.text-center 1910
+
+      p Today is the Casino's inauguration day. It should've been finished 3 years ago but different problems delayed the project. The liberal government allocated a lots of money earlier this year to see it finished. The costs were one third bigger then initially estimated (some say it was even more expensive).
+
+      p  It is built in the Art Nouveau style after three tries - after the Conservator Party won the elections, they stopped the project, hired a new architect and tried to build the Casino in a pure Romanian style. Now that everything is done some papers still characterize it as "a giant perked up with all sorts of gewgaws".
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-01-800.jpg', image_path), image_url('image-02-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-04-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-05-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-06-800.jpg', image_path), image_url('image-07-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-08-800.jpg', image_path), image_url('image-09-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-10-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-11-800.jpg', image_path), image_url('image-12-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-13-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-14-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-17-800.jpg', image_path), image_url('image-18-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-19-800.jpg', image_path), image_url('image-20-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+
+      h2.text-center Some other chapter
+
+      p Hello chapter
+
+  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-22-800.jpg', image_path), image_url('image-23-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-24-800.jpg', image_path), image_url('image-25-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-26-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-27-800.jpg', image_path), image_url('image-28-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-29-800.jpg', image_path), image_url('image-30-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-31-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-32-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-34-800.jpg', image_path), image_url('image-35-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-36-800.jpg', image_path), image_url('image-37-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-38-800.jpg', image_path), image_url('image-39-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-40-800.jpg', image_path), image_url('image-41-800.jpg', image_path) ] }
