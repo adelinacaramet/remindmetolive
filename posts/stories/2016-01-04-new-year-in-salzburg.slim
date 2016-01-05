@@ -3,8 +3,8 @@
   .row
     .col-sm-9.center-block.text-center
       header
-        h1 New Year in Salzburg
-        p Salzburg is cool. The Intro
+        h1 Winter Fairy Tale in Salzburg
+        p Salzburg deeply covered in snow is a unique backdrop for any Christmas or New Year celebration. And I say this because the days we spent last winter in Salzburg felt like stepping into a fairy tale. After all, it is the home of Wolfgang Amadeus Mozart as well as The Sound of Music - one my favourite musicals of all times. So you can imagine the excitement to discover the romantic city, the streets, as well as the hills, the places where we were all introduced to Fraulein Maria and the von Trapp family, to hear Mozart’s music.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -20,29 +20,39 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
 
-      h2.text-center 1910
+      p On the first morning in Salzburg I rushed out of bed and went outside to discover the city and meet our friends. It was still snowing and big snowflakes were dancing everywhere, similar to the night we arrived. This was too good to be true: the streets of the Old Town looked like they're covered with sugar icing and alive with the sound of Mozart, the remaining Christmas markets full of merry shoppers, Glühwein, gingerbread and glitter. 
 
-      p Today is the Casino's inauguration day. It should've been finished 3 years ago but different problems delayed the project. The liberal government allocated a lots of money earlier this year to see it finished. The costs were one third bigger then initially estimated (some say it was even more expensive).
-
-      p  It is built in the Art Nouveau style after three tries - after the Conservator Party won the elections, they stopped the project, hired a new architect and tried to build the Casino in a pure Romanian style. Now that everything is done some papers still characterize it as "a giant perked up with all sorts of gewgaws".
+  = render 'one_picture', locals: { picture_url: image_url('image-05-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-01-800.jpg', image_path), image_url('image-02-800.jpg', image_path) ] }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-04-800.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-05-1200.jpg', image_path) }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-06-800.jpg', image_path), image_url('image-07-800.jpg', image_path) ] }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-08-800.jpg', image_path), image_url('image-09-800.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-14-1200.jpg', image_path) }
 
   = render 'one_picture', locals: { picture_url: image_url('image-10-1200.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-11-800.jpg', image_path), image_url('image-12-800.jpg', image_path) ] }
-
   = render 'one_picture', locals: { picture_url: image_url('image-13-1200.jpg', image_path) }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-14-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-11-800.jpg', image_path), image_url('image-12-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-06-800.jpg', image_path), image_url('image-07-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-27-800.jpg', image_path), image_url('image-28-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-29-800.jpg', image_path), image_url('image-30-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-31-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+
+      h2.text-center Disovering buildings in Salzburg
+
+      p And so we started discovering Salzburg with its grey stone buildings and dark river. We walked through Mozart Square, along The Getreidegasse - Salzburg's most famous shopping street and then Residence Square, a magnificent forecourt between the two residential palaces of the archbishops of Salzburg. The square is bordered by a Catholic Cathedral, also known as the Salzburger Dom.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-26-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
 
@@ -50,26 +60,16 @@
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-19-800.jpg', image_path), image_url('image-20-800.jpg', image_path) ] }
 
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-22-800.jpg', image_path), image_url('image-23-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-24-1200.jpg', image_path) }
+
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
 
-      h2.text-center Some other chapter
+      h2.text-center The Alps and Hohensalzburg Fortress
 
-      p Hello chapter
-
-  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-22-800.jpg', image_path), image_url('image-23-800.jpg', image_path) ] }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-24-800.jpg', image_path), image_url('image-25-800.jpg', image_path) ] }
-
-  = render 'one_picture', locals: { picture_url: image_url('image-26-1200.jpg', image_path) }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-27-800.jpg', image_path), image_url('image-28-800.jpg', image_path) ] }
-
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-29-800.jpg', image_path), image_url('image-30-800.jpg', image_path) ] }
-
-  = render 'one_picture', locals: { picture_url: image_url('image-31-1200.jpg', image_path) }
+      p On top of the Festungsberg - a hill in the middle of the city, sitting majestically high up above the city, surrounded by the breathtaking Alps, there is the Hohensalzburg Fortress, Salzburg’s best known landmark, the largest completely preserved medieval fortress in Central Europe, dating back to the 11th Century. It still has the charm of the ages gone by.
 
   = render 'one_picture', locals: { picture_url: image_url('image-32-1200.jpg', image_path) }
 
@@ -79,6 +79,16 @@
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-36-800.jpg', image_path), image_url('image-37-800.jpg', image_path) ] }
 
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-38-800.jpg', image_path), image_url('image-39-800.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-38-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-40-800.jpg', image_path), image_url('image-41-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+
+      h2.text-center Happy New Year!
+
+      p With an amazing firework display from the Hohensalzburg Fortress, highlighting the picturesque, splendid Baroque buildings in sparkling colours, Salzburg welcomes the New Year with style. We went for the countdown with the countless merry revellers on ‘Staatsbrücke’ bridge where we got a fantastic view of the New Year’s spectacle. Ten, nine, eight … 
+      
+      p Happy New Year!
+
