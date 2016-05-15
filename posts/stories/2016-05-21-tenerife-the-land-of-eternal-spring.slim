@@ -1,0 +1,24 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-01-1600.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 Tenerife, the land of eternal spring
+
+        p This is a story about the largest and captivating island in the Canaries, "the land of eternal spring", Tenerife. From 2300m altitude to the sea, from the desert and volcanic landscapes to the subtropical forests, beaches of black sand with spectacular cliffs, all living together. The “blessed isles” indeed!
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Tenerife"  Tenerife
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      p In March, winter is still present in the northern hemisphere and it's that time of the year when you eagerly want to see the sun. We definitely felt that way. This time we had an extra incentive: to celebrate our dear friend and sister in law, Adela's 30th birthday. It's hard to imagine a better place to be during the long winter in Europe than Tenerife, with its lunar landscapes, desert areas and subtropical forests. I will let you enjoy the great variety of unique and uneven landscapes, by starting out story with wonderful beaches and finish it at high altitude.
+
