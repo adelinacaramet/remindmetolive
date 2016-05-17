@@ -3,7 +3,7 @@
 # See https://github.com/phusion/passenger-docker/blob/master/Changelog.md for
 # a list of version numbers.
 
-FROM phusion/passenger-customizable:0.9.16
+FROM phusion/passenger-customizable:0.9.18
 
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
