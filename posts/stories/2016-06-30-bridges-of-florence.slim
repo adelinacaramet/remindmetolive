@@ -1,0 +1,80 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-05-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 Bridges in Florence
+
+        p Bridges of Florence text xxx
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Florence" Florence
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      p Some intro xxxxXXX
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Vecchio
+
+  = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-04-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-05-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Santa Trinita
+
+  = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-09-800.jpg', image_path), image_url('image-10-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-11-800.jpg', image_path), image_url('image-12-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte alla Carraia
+
+  = render 'one_picture', locals: { picture_url: image_url('image-16-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-800.jpg', image_path), image_url('image-14-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-17-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Amerigo Vespucci
+
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte alle Grazie
+
+  = render 'one_picture', locals: { picture_url: image_url('image-20-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte San Niccolo
+
+  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+  
