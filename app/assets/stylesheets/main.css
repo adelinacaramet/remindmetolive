@@ -64,7 +64,7 @@ body {
 }
 .navbar,
 main {
-	background-color: #F5F7FA;
+	background-color: #F3F5F8;
 }
 .container {
     padding-right: 0;
@@ -3883,9 +3883,9 @@ input:focus:-ms-input-placeholder {
 	margin-bottom: 40px;
 }
 .post {
-    position: relative;
-	background: #FFF;
-    padding-bottom: 60px;
+  position: relative;
+	background: #FAFAFA;
+  padding-bottom: 60px;
 	border: 1px solid #E6E9ED;
 	border-bottom-width: 2px;
 	border-radius: 3px;
