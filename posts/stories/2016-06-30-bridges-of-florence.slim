@@ -52,11 +52,11 @@
 
   = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-09-800.jpg', image_path), image_url('image-10-800.jpg', image_path) ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-07-800.jpg', image_path), image_url('image-08-800.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
 
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-11-800.jpg', image_path), image_url('image-12-800.jpg', image_path) ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-10-800.jpg', image_path), image_url('image-11-800.jpg', image_path) ] }
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
@@ -64,13 +64,13 @@
       p The Ponte alla Carraia is a five-arched bridge spanning the River Arno and linking the
         district of Oltrarno to the rest of the city of Florence.
 
-  = render 'one_picture', locals: { picture_url: image_url('image-16-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-12-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-800.jpg', image_path), image_url('image-14-800.jpg', image_path) ] }
 
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-17-800.jpg', image_path) ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-17-1200.jpg', image_path) }
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
@@ -78,19 +78,30 @@
       p It seems that drivers prefer this bridge, as there are always lots of cars using it to cross
         the river.
 
-  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Ponte alle Grazie
 
-  = render 'one_picture', locals: { picture_url: image_url('image-20-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
 
-  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-20-1200.jpg', image_path) }
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center Ponte San Niccolo
-      p Small, one arch bridge.
+      h2.text-center Other Bridges
+      p Ponte San Niccolo Small is a smaller, one arch bridge. Florence has other bridges for which 
+        I wasn't able to find the name.
 
-  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-21-800.jpg', image_path), image_url('image-22-800.jpg', image_path) ] }
+
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Overview
+      p I'll end the story with an overview photo to show how beautifully everything fits together
+        and how the bridges bring more personality to the city. Florence is for sure a city worth
+        visiting, an architectural beauty!
+
+  = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
