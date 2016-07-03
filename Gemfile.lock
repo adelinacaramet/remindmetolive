@@ -240,6 +240,7 @@ DEPENDENCIES
   newrelic_rpm
   rack-mini-profiler
   rails (= 4.2.3)
+  rb-fsevent
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -253,4 +254,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.3
+   1.12.5

@@ -1,0 +1,107 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-05-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 Bridges in Florence
+
+        p The <a href="https://en.wikipedia.org/wiki/Arno_River">Arno River</a> naturally splits Florence in two sides.
+          It's now surprise that the two sides of the city are linked through bridges. What's interesting is
+          how beautiful most of the bridges are and the way they dominate Florence's cityscape.
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Florence" Florence
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      p I took the next photo from the Michelangelo Square. From here you can have a nice overview of the
+        bridges. The colorful Ponte Vecchio is the first in line, followed by the others.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Vecchio
+      p The most iconic bridge in Florence is Ponte Vecchio, the Old Bridge.
+        This bridge is always really crowded, from far away looks like there is perpetual party.
+        What's really happening is that the mass of tourists wants to take selfies with the river and the next bridges.
+        There is also a market on the bridge, where you can buy luxury goods, like jewelry and expensive watches.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-04-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-05-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Santa Trinita
+
+      p The Ponte Santa Trìnita (The Holy Trinity Bridge) is the oldest elliptic arch bridge in the world,
+        the three flattened ellipses giving the structure its celebrated elegant appearance. This bridge is
+        the most central one. We stopped here many times to eat ice cream and admire the river and the other
+        bridges.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-07-800.jpg', image_path), image_url('image-08-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-10-800.jpg', image_path), image_url('image-11-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte alla Carraia
+      p The Ponte alla Carraia is a five-arched bridge spanning the River Arno and linking the
+        district of Oltrarno to the rest of the city of Florence.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-12-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-800.jpg', image_path), image_url('image-14-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-17-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte Amerigo Vespucci
+      p It seems that drivers prefer this bridge, as there are always lots of cars using it to cross
+        the river.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Ponte alle Grazie
+
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-20-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Other Bridges
+      p Ponte San Niccolo Small is a smaller, one arch bridge. Florence has other bridges for which 
+        I wasn't able to find the names.
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-21-800.jpg', image_path), image_url('image-22-800.jpg', image_path) ] }
+
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Overview
+      p I'll end the story with an overview photo to show how beautifully everything fits together
+        and how the bridges bring more personality to the city. Florence is for sure a city worth
+        visiting, an architectural beauty!
+
+  = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
