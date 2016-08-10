@@ -1,0 +1,57 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-02-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 The Tower of Pisa
+
+        p The pisa xxx
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Pisa" Pisa
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      p xcxxxxx
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-04-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-05-800.jpg', image_path), image_url('image-06-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-08-800.jpg', image_path), image_url('image-09-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-10-800.jpg', image_path), image_url('image-11-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-12-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-800.jpg', image_path), image_url('image-14-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-17-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-20-800.jpg', image_path), image_url('image-21-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-25-800.jpg', image_path), image_url('image-24-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
