@@ -1,0 +1,126 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-02-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 London after BREXIT
+
+        p The pisa xxx
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Pisa" Pisa
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Big Ben and London Eye
+      p xxx
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-05-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-04-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-08-800.jpg', image_path), image_url('image-09-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-10-800.jpg', image_path), image_url('image-11-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The BREXIT Protests
+      p xxx
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-12-800.jpg', image_path), image_url('image-13-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-14-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Westminster Abbey
+      p xxx
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-17-800.jpg', image_path), image_url('image-18-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Buckingham Palace
+      p xxx
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-19-800.jpg', image_path), image_url('image-20-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-23-800.jpg', image_path), image_url('image-24-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-25-800.jpg', image_path), image_url('image-26-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-27-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-28-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-29-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-30-800.jpg', image_path), image_url('image-31-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-32-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center St Paul's Cathedral
+      p xxx
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-34-800.jpg', image_path), image_url('image-35-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-36-800.jpg', image_path), image_url('image-37-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-38-800.jpg', image_path), image_url('image-39-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-40-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center London Bridge
+      p xxx
+
+  = render 'one_picture', locals: { picture_url: image_url('image-41-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-42-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-43-800.jpg', image_path), image_url('image-44-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center National Gallery and Trafalgar Square
+      p xxx
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-45-800.jpg', image_path), image_url('image-46-800.jpg', image_path) ] }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-47-800.jpg', image_path), image_url('image-48-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-49-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-50-800.jpg', image_path), image_url('image-51-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-52-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-53-1200.jpg', image_path) }
