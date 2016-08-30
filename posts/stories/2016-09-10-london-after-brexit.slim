@@ -3,9 +3,9 @@
   .row
     .col-sm-9.center-block.text-center
       header
-        h1 London after BREXIT
+        h1 London After Brexit
 
-        p The pisa xxx
+        p We visited London the weekend after brexit. Because of that we were able to catch some historic moments. Of course, we were there as tourists, so most of the photos are about the amazing London city and landmarks.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -14,22 +14,19 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Pisa" Pisa
+          a href="https://en.wikipedia.org/wiki/London" London
         li.client by #{post_meta.author}
         = render 'like_button'
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Big Ben and London Eye
-      p xxx
 
   = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
 
   = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-03-800.jpg', image_path), image_url('image-05-800.jpg', image_path) ] }
-
-  = render 'one_picture', locals: { picture_url: image_url('image-04-1200.jpg', image_path) }
 
   = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
 
@@ -41,8 +38,9 @@
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center The BREXIT Protests
-      p xxx
+      h2.text-center The Brexit Protests
+      p In front of Westminster Abbey there was a crowd of people protesting against the brexit.
+        They had banners stating that "Unity is strength".
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-12-800.jpg', image_path), image_url('image-13-800.jpg', image_path) ] }
 
@@ -51,7 +49,6 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Westminster Abbey
-      p xxx
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-15-800.jpg', image_path), image_url('image-16-800.jpg', image_path) ] }
 
@@ -60,7 +57,6 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Buckingham Palace
-      p xxx
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-19-800.jpg', image_path), image_url('image-20-800.jpg', image_path) ] }
 
@@ -69,6 +65,14 @@
   = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-23-800.jpg', image_path), image_url('image-24-800.jpg', image_path) ] }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Pride in London
+      p In a different part of the city people were happy because of the Pride Parade. This 
+        attracted a higher number of participants compared to the Brexit protesters.
+        The <a href="http://prideinlondon.org/">Pride Festival</a> took place from 10-26 June,
+        with the main weekend on 25-26 June. 
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-25-800.jpg', image_path), image_url('image-26-800.jpg', image_path) ] }
 
@@ -80,6 +84,12 @@
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-30-800.jpg', image_path), image_url('image-31-800.jpg', image_path) ] }
 
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center London Emblems
+      p The most emblematic things for London are the taxis and red double deckers. I got 
+        photos of both.
+
   = render 'one_picture', locals: { picture_url: image_url('image-32-1200.jpg', image_path) }
 
   = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
@@ -87,9 +97,10 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center St Paul's Cathedral
-      p xxx
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-34-800.jpg', image_path), image_url('image-35-800.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-04-1200.jpg', image_path) }
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-36-800.jpg', image_path), image_url('image-37-800.jpg', image_path) ] }
 
@@ -100,7 +111,7 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center London Bridge
-      p xxx
+      p The famous landmark, at the golden hour. What can be more beautiful?
 
   = render 'one_picture', locals: { picture_url: image_url('image-41-1200.jpg', image_path) }
 
@@ -111,7 +122,8 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center National Gallery and Trafalgar Square
-      p xxx
+      p Lots of fun in the Trafalgar Square. Everybody is happy here and there is always something 
+        happening
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-45-800.jpg', image_path), image_url('image-46-800.jpg', image_path) ] }
 
