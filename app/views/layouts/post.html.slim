@@ -2,8 +2,9 @@
   section#portfolio-post
     = content_for?(:story_content) ? yield(:story_content) : yield
     .row.inner-top-sm
-      .col-md-7.col-sm-8.center-block
-        = render partial: 'partials/rrssb', locals: { share_url: url(@post.post_meta) }
+      .col-lg-8.col-md-8.col-sm-8.center-block
+        p.text-center Did you like our story? Subscribe:
+        = render partial: 'partials/subscribe'
     .end-story-logo
       img.end-story-image alt="" src="/assets/cocos.png"
 = render template: 'layouts/application'
