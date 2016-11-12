@@ -5,7 +5,7 @@
       header
         h1 Siena, The Tuscan Beauty
 
-        p Italy has certainly won my heart, forever, irreversible. So much that everytime I think about going on holiday I always think about going back there. It has so much to offer. For example, after visiting Florence I could not imagine there will be something else that could mesmerize me as much. Siena proved me wrong. This small town it's so well preserved that it feels like stepping back a few centuries.
+        p Italy has certainly won my heart, forever and irreversible. So much that everytime I think about going on holiday I always think about going back there. It has so much to offer. For example, after visiting <a href="https://en.wikipedia.org/wiki/Florence">Florence</a> I could not imagine there will be something else that could mesmerize me as much. <a href="https://en.wikipedia.org/wiki/Siena">Siena</a> proved me wrong. This small town it's so well preserved that it feels like stepping back a few centuries.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -14,15 +14,16 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Pisa" Pisa
+          a href="https://en.wikipedia.org/wiki/Siena" Siena
         li.client by #{post_meta.author}
         = render 'like_button'
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      p Siena is a gloriously beautiful medieval town built upon three hills in the heart of scenic Tuscany.
-        It is a city full of churches, museums, and great views over the surrounding countryside. 
-        In the centre of the town you will find Piazza del Campo. Stepping into this spectacular shell-shaped piazza is simply memorizing, it's like a film set. It is famous for the Palio, which is a horse race run here twice a year, in the summer time. These races pit the 17 different neighborhoods of Siena against each other. You can’t go anywhere in Siena without hearing about the Palio, it is what unites but at the same time divides the Sienese more than anything else.
+      p <a href="https://en.wikipedia.org/wiki/Siena">Siena</a> is a gloriously beautiful medieval town built upon three hills in the heart of scenic Tuscany. It is a city full of churches, museums, and great views over the surrounding countryside. 
+        
+
+      p In the centre of the town you will find <a href="https://en.wikipedia.org/wiki/Piazza_del_Campo">Piazza del Campo</a>, a spectacular shell-shaped piazza that is simply memorizing. It is famous for the <a href="https://en.wikipedia.org/wiki/Palio_di_Siena">Palio</a>, which is a horse race run here twice a year, in the summer time. These races pit the 17 different neighborhoods of Siena against each other. You can’t go anywhere in Siena without hearing about the Palio, it is what unites but at the same time divides the Sienese more than anything else.
 
   = render 'one_picture', locals: { picture_url: image_url('image-03-1200.jpg', image_path) }
 
@@ -36,9 +37,7 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Climb up the Tower
-      p The uniquely round-shaped piazza del Campo is overlooked by the magestic Torre del Mangia. It is an experience in itself to enjoy an exquisite espresso or cappuccino in one of the historic cafés in the square and enjoy the view. 
-      p Dare to climb the 400 steps to reach the top of the tower because the views over the city are absolutely incredible.
-
+      p The uniquely round-shaped Piazza del Campo is overlooked by the magestic <a href="https://en.wikipedia.org/wiki/Torre_del_Mangia">Torre del Mangia</a>. Dare to climb the 400 steps to reach the top of the tower because the views over the city are absolutely incredible.
 
   = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
 
@@ -53,8 +52,9 @@
   .row.inner-top-sm
   .col-md-8.col-sm-9.center-block
     h2.text-center The Cathedral
-    p Another sight for the eyes is the mesmerising Siena Cathedral. The facade of the cathedral is incredibly intricate and full of detail. The whole cathedral was painted, sculpted, and decorated by the most celebrated Italian artists of that time. It is just amazing and I’m afraid these words and photos just don’t give it justice.
-    The interior is absolutely jaw dropping, yet another marvel in itself. It is like a museum, with its black and white marble pillars, marble floor panels, beautiful renaissances frescos, a huge bronze dome, a sculpture of St. Peter by Michelangelo. It definetly gives the cathedral a luxurious feel, with no expense spared in displaying the historical wealth of Siena.
+    p Another sight for the eyes is the mesmerising <a href="https://en.wikipedia.org/wiki/Siena_Cathedral">Siena Cathedral</a>. The facade of the cathedral is intricate and full of detail. The whole cathedral was painted, sculpted, and decorated by the most celebrated Italian artists of that time. It is just beautiful and I’m afraid these words and photos just don’t give it justice.
+    
+    p The interior is absolutely jaw dropping, yet another marvel in itself. It is like a museum, with its black and white marble pillars, marble floor panels, beautiful renaissances frescos, a huge bronze dome, a sculpture of St. Peter by Michelangelo. It definetly gives the cathedral a luxurious feel, with no expense spared in displaying the historical wealth of Siena.
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-16-800.jpg', image_path), image_url('image-17-800.jpg', image_path) ] }
 
