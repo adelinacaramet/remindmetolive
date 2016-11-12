@@ -32,7 +32,6 @@ ADD nginx/00_app_env.conf /etc/nginx/conf.d/00_app_env.conf
 
 EXPOSE 80 443
 
-# install node
 USER app
 ENV HOME /home/app
 
