@@ -1,0 +1,104 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-08-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 Irina & Lucian
+        h2 Maternity Photo Session
+
+        p Our friends, Lucian and Irina are having a baby. This is such a wonderful moment!
+          We decided to go together at the Charlottenburg Palace to do a maternity photo session.
+          We were really lucky we got a wonderful sunny weekend, the last sunny one this autumn,
+          before all of the leaves have already fallen.
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Charlottenburg_Palace" Charlottenburg Palace
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The Charlottenburg Palace
+      p The impressive palace is a great place to take photos and this time is coverd coverd with scaffolding,
+        which somehow gives a symbolic hint to our photo shoot: "work in progress!" We start our photo session here,
+        taking advantage of the bright sun. I'm using a polarizer filter here, to make the colors pop!
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-02-1200.jpg', image_path), image_url('image-03-1200.jpg', image_path) ] }
+  
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-05-1200.jpg', image_path), image_url('image-06-1200.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-10-1200.jpg', image_path) }
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-27-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The Forest
+      p The sun coming through the colorful leaves of the autumn gave the perfect light for the next photos.
+        Using a long lens allowed me to isolate my subjects and bring that great shallow depth of field!
+        I'll let you observe the authentic joy on Lucian and Irina's faces, brought by this great moment in their lives,
+        having a baby.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-16-1200.jpg', image_path) }
+  
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-1200.jpg', image_path), image_url('image-15-1200.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-20-1200.jpg', image_path), image_url('image-21-1200.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-23-1200.jpg', image_path), image_url('image-24-1200.jpg', image_path) ] }
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-35-1200.jpg', image_path) }
+  
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The Lake
+      p Moving away from "the forest", we chose the nearby lake is our third location.
+      
+      p In the next photo, the contrast between the blue lake and Irina's orange pullover is just amazing.
+      
+      p You might already know that the bridge in the Charlottenburg Garden is one of our
+        <a href="/streets-of-berlin/charlottenburg-bridge-in-autumn.html">favorite places</a>.
+        Like always, it gave me a really nice opportunity to play with reflections.
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-28-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-30-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-31-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-37-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-39-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-42-1200.jpg', image_path) }
+  
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The Autumn
+      p The colors of the autumn are just amazing! My favorite photo from this series is the next one.
+        I call it "The Tree of Life", as there are four colors spreading from each of the corners,
+        one for each of the seasons. We have spring and summer to the left, and autumn and winter to the right.
+        And of course, pregnant Irina in the middle getting support from her dear husband, Lucian.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-44-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-46-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-48-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-51-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-52-1200.jpg', image_path), image_url('image-53-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-54-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-55-1200.jpg', image_path), image_url('image-56-1200.jpg', image_path) ] }  
+  = render 'one_picture', locals: { picture_url: image_url('image-59-1200.jpg', image_path) }  
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-60-1200.jpg', image_path), image_url('image-61-1200.jpg', image_path) ] }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-62-1200.jpg', image_path), image_url('image-63-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-64-1200.jpg', image_path) }
+  
+  
