@@ -3,13 +3,17 @@
   .row
     .col-sm-9.center-block.text-center
       header
-        h1 Irina & Lucian
-        h2 Maternity Photo Session
+        h1 Florence
 
-        p Our friends, Lucian and Irina are having a baby. This is such a wonderful moment!
-          We decided to go together at the Charlottenburg Palace to do a maternity photo session.
-          We were really lucky we got a wonderful sunny weekend, the last sunny one this autumn,
-          before all of the leaves have already fallen.
+        p To me, Florence is one of my favourite places and this year I choose to spend my birthday there
+          to discover its beauty. It is said to be small and in the historical center you could quite literally
+          walk across the city in around half an hour. But trust me, not in even a week is enough to enjoy
+          this city, that will blow you away by it's architecture.
+          Or I just might be really greedy and want to take it all in. :)
+
+        p It is because everywhere you look, there is a beautiful building or an art gallery, an antique shop,
+          sculptures, artisans everywhere. There is this wonderful contemporary side to this Renaissance city that gives
+          an unique charm to it. I truly feel in love with this city, and I hope these pictures gives it justice.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -18,90 +22,95 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Charlottenburg_Palace" Charlottenburg Palace
+          a href="https://en.wikipedia.org/wiki/Florence_Cathedral" Florence Cathedral
         li.client by #{post_meta.author}
         = render 'like_button'
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center The Charlottenburg Palace
-      p The impressive palace is a great place to take photos and this time is coverd coverd with scaffolding,
-        which somehow gives a symbolic hint to our photo shoot: "work in progress!" We start our photo session here,
-        taking advantage of the bright sun. I'm using a polarizer filter here, to make the colors pop!
+      h2.text-center Florence Cathedral
+      p The Cathedral of Saint Mary of the Flower, or Duomo di Firenze, as it is called in Italy,
+        is one of the most amazing works of architecture in the world. I still remember the first time
+        we saw it. We were strolling towards the center through the narrow streets,
+        enjoying aromas of Italian coffee and cuisine when the Duomo unexpectedly appeared.
+        It really stood out by its size. It was simply oversized. It definitely preserved its height supremacy
+        and volumetric domination of the rest of the city.
+
+      p Its Building commenced in 1296 and the exterior is decorated in pink, green and white marble.
+        Entering the cathedral through the tremendous bronze doors that depict the life of "The Madonna"
+        you will find a modest and calm setting where you admire the hand painted dome showing
+        "The Final Judgement".
 
   = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
-  
+
   = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
 
   = render 'three_pictures', locals: { picture_urls: [ image_url('image-03-1200.jpg', image_path), image_url('image-04-1200.jpg', image_path), image_url('image-05-1200.jpg', image_path) ] }
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-06-1200.jpg', image_path), image_url('image-07-1200.jpg', image_path) ] }
-  
+
   = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
-  
+
   = render 'three_pictures', locals: { picture_urls: [ image_url('image-09-1200.jpg', image_path), image_url('image-10-1200.jpg', image_path), image_url('image-11-1200.jpg', image_path) ] }
-  
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center From the top of the Santa Maria del Fiore
+
+      p With a little bit of work on your end, Duomo di Firenze will graciously treat you with one
+        of the best views in the world, offering a unique opportunity to enjoy
+        the city and Tuscany panorama from 115 meters hight. Breathtaking emotions and impressions are
+        however difficult to convey with words. To understand you should experience it.
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-12-1200.jpg', image_path), image_url('image-13-1200.jpg', image_path) ] }
 
   = render 'one_picture', locals: { picture_url: image_url('image-14-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-15-1200.jpg', image_path) }
-  
-  = render 'two_pictures', locals: { picture_urls: [ image_url('image-16-1200.jpg', image_path), image_url('image-17-1200.jpg', image_path) ] }  
-  
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-16-1200.jpg', image_path), image_url('image-17-1200.jpg', image_path) ] }
+
   = render 'one_picture', locals: { picture_url: image_url('image-18-1200.jpg', image_path) }
-  
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-19-1200.jpg', image_path), image_url('image-20-1200.jpg', image_path) ] }
-  
+
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center The Forest
-      p The sun coming through the colorful leaves of the autumn gave the perfect light for the next photos.
-        Using a long lens allowed me to isolate my subjects and bring that great shallow depth of field!
-        I'll let you observe the authentic joy on Lucian and Irina's faces, brought by this great moment in their lives,
-        having a baby.
+      h2.text-center Glimpse of the city
+      p Glimpse of the city
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-21-1200.jpg', image_path), image_url('image-22-1200.jpg', image_path) ] }
-  
+
   = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
-  
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-24-1200.jpg', image_path), image_url('image-25-1200.jpg', image_path) ] }
-  
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-26-1200.jpg', image_path), image_url('image-27-1200.jpg', image_path) ] }
 
   = render 'one_picture', locals: { picture_url: image_url('image-28-1200.jpg', image_path) }
-  
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-29-1200.jpg', image_path), image_url('image-30-1200.jpg', image_path) ] }
-  
+
   = render 'one_picture', locals: { picture_url: image_url('image-31-1200.jpg', image_path) }
-  
-  
+
+
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center The Lake
-      p Moving away from "the forest", we chose the nearby lake is our third location.
-      
-      p In the next photo, the contrast between the blue lake and Irina's orange pullover is just amazing.
-      
-      p You might already know that the bridge in the Charlottenburg Garden is one of our
-        <a href="/streets-of-berlin/charlottenburg-bridge-in-autumn.html">favorite places</a>.
-        Like always, it gave me a really nice opportunity to play with reflections.
-        
+      h2.text-center Piazzale Michelangelo
+      p Piazzale Michelangelo
+
   = render 'one_picture', locals: { picture_url: image_url('image-32-1200.jpg', image_path) }
-        
+
   = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
-  
+
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
-      h2.text-center The Autumn
-      p The colors of the autumn are just amazing! My favorite photo from this series is the next one.
-        I call it "The Tree of Life", as there are four colors spreading from each of the corners,
-        one for each of the seasons. We have spring and summer to the left, and autumn and winter to the right.
-        And of course, pregnant Irina in the middle getting support from her dear husband, Lucian.
-        
+      h2.text-center Palazzo Pitti
+      p Palazzo Pitti
+
   = render 'one_picture', locals: { picture_url: image_url('image-34-1200.jpg', image_path) }
-  
+
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-35-1200.jpg', image_path), image_url('image-36-1200.jpg', image_path) ] }
-  
+
   = render 'one_picture', locals: { picture_url: image_url('image-37-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-38-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-39-1200.jpg', image_path) }
@@ -110,5 +119,3 @@
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-43-1200.jpg', image_path), image_url('image-44-1200.jpg', image_path) ] }
   = render 'one_picture', locals: { picture_url: image_url('image-45-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-46-1200.jpg', image_path) }
-  
-  
