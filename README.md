@@ -14,18 +14,14 @@
 
 ## Docker
 
-    boot2docker start
-    boot2docker shellinit
-    docker build -t danpersa/remindmetolive:latest .
-    docker run -p 80:80 danpersa/remindmetolive:latest
-    docker run -i -p 80:80 -t danpersa/remindmetolive:latest /bin/bash
+    docker-machine start default
+    make
 
+    docker run -i -p 80:80 -t danpersa/remindmetolive:latest /bin/bash
     docker exec -t -i YOUR-CONTAINER-ID bash -l
 
     passenger-status
     passenger-memory-stats
-
-    boot2docker ip
 
     docker push danpersa/remindmetolive
     docker pull danpersa/remindmetolive:latest

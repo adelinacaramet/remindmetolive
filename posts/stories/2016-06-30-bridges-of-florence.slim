@@ -5,7 +5,8 @@
       header
         h1 Bridges in Florence
 
-        p The <a href="https://en.wikipedia.org/wiki/Arno_River">Arno River</a> naturally splits Florence in two sides.
+        p The <a href="https://en.wikipedia.org/wiki/Arno_River">Arno River</a> naturally splits
+          <a href="florence-theme-park-of-renaissance.html">Florence</a> in two sides.
           It's now surprise that the two sides of the city are linked through bridges. What's interesting is
           how beautiful most of the bridges are and the way they dominate Florence's cityscape.
 
@@ -16,7 +17,7 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Florence" Florence
+          a href="florence-theme-park-of-renaissance.html" Florence
         li.client by #{post_meta.author}
         = render 'like_button'
 
@@ -102,6 +103,7 @@
       h2.text-center Overview
       p I'll end the story with an overview photo to show how beautifully everything fits together
         and how the bridges bring more personality to the city. Florence is for sure a city worth
-        visiting, an architectural beauty!
+        visiting, an architectural beauty! Read more about Florence
+        <a href="florence-theme-park-of-renaissance.html">here.</a>
 
   = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
