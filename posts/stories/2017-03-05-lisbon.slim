@@ -1,0 +1,92 @@
+.img-bg.height-sm.border-bottom style=("background-image: url(#{image_url('teaser-01-2048.jpg', image_path)});")
+.container.inner-top
+  .row
+    .col-sm-9.center-block.text-center
+      header
+        h1 Lisbon
+
+        p It's hard to find the right words when writing about the magnificent 
+          <a href="https://en.wikipedia.org/wiki/Florence">Florence</a>.
+          It is such a special place that it is hard to find the right words that would give it justice.
+          That's why, I will quote the Italian writer Tondelli, that describes Florence as
+          the “Disneyland of the Renaissance”. Because here, it is really about getting surprised every day.
+          I hope our pictures can explain why we were so blown away by its architecture and charm.
+
+  .row.inner-top-xs
+    .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
+      ul.item-details
+        li.date #{publish_month post_meta} #{publish_day post_meta}
+        li.categories
+          = render 'tags', locals: { tags: post_meta.tags }
+        li.url
+          a href="https://en.wikipedia.org/wiki/Florence" Florence
+        li.client by #{post_meta.author}
+        = render 'like_button'
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Florence Cathedral
+      p <a href="https://en.wikipedia.org/wiki/Florence_Cathedral">The Cathedral of Saint Mary of the Flower</a>,
+        or Duomo di Firenze, as it is called in Italy, is one of the most amazing works of architecture
+        in the world. I still remember the first time we saw it. We were strolling towards the center
+        through the narrow streets, enjoying aromas of Italian coffee and cuisine when the Duomo
+        unexpectedly appeared. It really stands out by its size. It is simply oversized!
+        It has definitely preserved its height supremacy and volumetric domination of the rest of the city.
+
+  = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-03-1200.jpg', image_path) }
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-04-1200.jpg', image_path), image_url('image-05-1200.jpg', image_path) ] }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-10-1200.jpg', image_path), image_url('image-11-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-12-1200.jpg', image_path) }
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center From the top of the Santa Maria del Fiore
+
+      p With a little bit of work on your end, as there are plenty of stairs to climb,
+        Duomo di Firenze will graciously treat you with one of the best views in the world,
+        offering a unique opportunity to enjoy the city and Tuscany panorama from 115 meters hight.
+        Breathtaking emotions and impressions are however difficult to convey with words.
+        To understand you have to experience it.
+
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-1200.jpg', image_path), image_url('image-14-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-15-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-16-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-17-1200.jpg', image_path), image_url('image-18-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-19-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-20-1200.jpg', image_path) }
+
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center Glimpse of the city
+      p When you say Florence people think <a href="https://en.wikipedia.org/wiki/Michelangelo">Michelangelo</a>’s
+        <a href="https://en.wikipedia.org/wiki/David_(Michelangelo)">David</a>
+        and <a href="https://en.wikipedia.org/wiki/Sandro_Botticelli">Botticelli</a>’s <a href="https://en.wikipedia.org/wiki/The_Birth_of_Venus">Venus</a>,
+        but there are several wonderful little churches and museums. For example, the center of the city is scattered
+        with Dante’s verses: the walls of medieval buildings become pages of the Divine Comedy!
+        Therefore, everywhere you look, there is a beautiful medieval building, an art gallery
+        or a beautiful sculpture. <a href="bridges-of-florence.html">The birdges of Florence</a> have an important role
+        in Florence's cityscape, therefore we dedicated an entire story for them. Check it out <a href="bridges-of-florence.html">here</a>!
+
+  = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-23-1200.jpg', image_path) }
+  
+  = render 'one_picture', locals: { picture_url: image_url('image-24-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-25-1200.jpg', image_path), image_url('image-26-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-27-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-28-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-29-1200.jpg', image_path) }
+
+  = render 'one_picture', locals: { picture_url: image_url('image-30-1200.jpg', image_path) }
+  = render 'two_pictures', locals: { picture_urls: [ image_url('image-31-1200.jpg', image_path), image_url('image-32-1200.jpg', image_path) ] }
+  = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-34-1200.jpg', image_path) }
