@@ -3,13 +3,14 @@
   .row
     .col-sm-9.center-block.text-center
       header
-        h1 Lisbon, a charming city
+        h1 Lisbon, A Charming City
 
-        p The world’s most well-respected travel magazine, Condé Nast Traveller describes Lisbon as the
-          coolest city in Europe. The editor of the magazine, Steve King says that Lisbon’s character is unique,
-          and that you’ll find none of “Berlin’s angst or Paris’s hauteur or Rome’s braggadocio” in the city.
-          Expect instead to find “a modesty that borders on reticence, a wistful humour tinged with melancholy”.
-          We found Lisbon a charming city and we will invite you to see it through our eyes.
+        p The world’s most well-respected travel magazine, Condé Nast Traveller describes
+          Lisbon as the coolest city in Europe. The editor of the magazine, Steve King
+          says that Lisbon’s character is unique, and that you’ll find none of “Berlin’s angst
+          or Paris’s hauteur or Rome’s braggadocio” in the city. Expect instead to find
+          “a modesty that borders on reticence, a wistful humour tinged with melancholy”.
+          We found Lisbon a charming city and we invite you to see it through our eyes.
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -18,18 +19,16 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Florence" Florence
+          a href="https://en.wikipedia.org/wiki/Lisbon" Lisbon
         li.client by #{post_meta.author}
         = render 'like_button'
 
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center The Seven Hills of Lisbon
-      p Lisbon is located in a mountainous region of Portugal. It is claimed to be the city of seven hills
-        (you can observe the similarities with Rome). They are peppered across the cityscape offering stupendous horizons for
-        the curious traveler. What it is fascinating is that the city had a tram systems
-        consisted of 27 tram lines, being one of the most complex tram networks in Europe.
-        Now, the only lines that are preserved are the ones in the Old Town. No wonder they are a splash among tourists.
+      p Lisbon is located in the mountainous region of Portugal. It is claimed to be the city of seven hills
+        (you can observe the similarities with Rome). The hills are peppered across the cityscape
+        offering stupendous horizons for the curious traveler.
 
   = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
 
@@ -40,6 +39,15 @@
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-04-1200.jpg', image_path), image_url('image-05-1200.jpg', image_path) ] }
 
   = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
+  
+  .row.inner-top-sm
+    .col-md-8.col-sm-9.center-block
+      h2.text-center The Lisbon Trams
+      p What it is fascinating is that the city had a tram systems consisting of 27
+        tram lines, being one of the most complex tram networks in Europe. Now,
+        the only lines that are preserved are the ones in the Old Town.
+        No wonder they are a splash among tourists.
+  
   = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-09-1200.jpg', image_path) }
@@ -64,12 +72,15 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center Belem district
-      p Belem is a picturesque district to the west of Lisbon, which is the location of many of the city's attractions.
-        For example, the famous Belem tower with its breathtaking design. This is no ordinary tower, but an icon
-        of Portuguese maritime discoveries. Because its significance the Belem Tower is a UNESCO World Heritage monument.
-        Another important piece of the Belem district is The Mosteiro dos Jeronimos, one of the most ornamented churches of
-        Portugal. The monastery was historically associated with the early sailors as explorers,
-        as it was from here that Vasco da Gama spent his last night before his voyage to the Far East.
+      p Belem is a picturesque district to the west of Lisbon, which is the location
+        of many of the city's attractions.
+        For example, the famous Belem tower with its breathtaking design.
+        This is no ordinary tower, but an icon of Portuguese maritime discoveries.
+        Because its significance the Belem Tower is a UNESCO World Heritage monument.
+        Another important piece of the Belem district is The Mosteiro dos Jeronimos,
+        one of the most ornamented churches of Portugal. The monastery was historically
+        associated with the early sailors as explorers. Here is the place where,
+        Vasco da Gama spent his last night before his voyage to the Far East.
 
   = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-22-1200.jpg', image_path) }
