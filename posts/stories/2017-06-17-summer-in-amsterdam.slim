@@ -5,12 +5,12 @@
       header
         h1 Summer in Amsterdam
 
-        p The world’s most well-respected travel magazine, Condé Nast Traveller describes
-          Lisbon as the coolest city in Europe. The editor of the magazine, Steve King
-          says that Lisbon’s character is unique, and that you’ll find none of “Berlin’s angst
-          or Paris’s hauteur or Rome’s braggadocio” in the city. Expect instead to find
-          “a modesty that borders on reticence, a wistful humour tinged with melancholy”.
-          We found Lisbon a charming city and we invite you to see it through our eyes.
+        p I usually need a few days to take a few good photos in a new city. I took
+          me 3 hours to take the ones in Amsterdam. That says a lot! The weather was
+          great, the sky was blue and perfect—with mushy clouds—and the light was nice.
+          In the summer, the sun stays up on the sky until late and as the city center
+          is round, there are always a few sunny streets, with good light!
+          You only have to search for them!
 
   .row.inner-top-xs
     .col-sm-10.col-xs-11.center-block.text-center.inner-top-xs.border-top
@@ -19,7 +19,7 @@
         li.categories
           = render 'tags', locals: { tags: post_meta.tags }
         li.url
-          a href="https://en.wikipedia.org/wiki/Amsterdam" Amsterdam
+          a target="_blank" href="https://en.wikipedia.org/wiki/Amsterdam" Amsterdam
         li.client by #{post_meta.author}
         = render 'like_button'
 
@@ -32,13 +32,9 @@
         is another one, where somebody is entertaining the toursits with a show!
 
   = render 'one_picture', locals: { picture_url: image_url('image-01-1200.jpg', image_path) }
-
   = render 'one_picture', locals: { picture_url: image_url('image-02-1200.jpg', image_path) }
-
   = render 'one_picture', locals: { picture_url: image_url('image-03-1200.jpg', image_path) }
-
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-04-1200.jpg', image_path), image_url('image-05-1200.jpg', image_path) ] }
-
   = render 'one_picture', locals: { picture_url: image_url('image-06-1200.jpg', image_path) }
   
   .row.inner-top-sm
@@ -48,8 +44,8 @@
         <a target="blank" href="https://en.wikipedia.org/wiki/Canals_of_Amsterdam">canals</a>.
         There are kilometers of canals, about 90 islands and 1,500 bridges here.
         Plenty of space for the tourists to do cruises around the city. Considering
-        how many canals there are, boats could also be a good option for getting
-        from one part of the city to another.
+        how many canals there are, boats can be a good option for getting
+        from one part of the city to another. Or to throw a boat party!
   
   = render 'one_picture', locals: { picture_url: image_url('image-07-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-08-1200.jpg', image_path) }
@@ -67,8 +63,7 @@
         next person riding a bike coming from! They are also fast! As a matter of fact,
         while I was watching the streets, I was almost sure that every biker is millimetrically
         avoiding the others. I've never seen any collision, but keeping in mind how
-        close they were, I was expecting one anytime!
-        
+        close they were, I was expecting one anytime!        
 
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-13-1200.jpg', image_path), image_url('image-14-1200.jpg', image_path) ] }
   = render 'one_picture', locals: { picture_url: image_url('image-15-1200.jpg', image_path) }
@@ -80,18 +75,18 @@
   .row.inner-top-sm
     .col-md-8.col-sm-9.center-block
       h2.text-center The Architecture
-      p Belem is a picturesque district to the west of Lisbon, which is the location
-        of many of the city's attractions.
+      p When it comes to architecture, Amsterdam is full of surprises. You can find
+        small houses from the 17th century as well as large museums, palaces or cathedrals.
+        The typical houses in the center have are made out of bricks and have big windows.
+        Each of them has a hook on top, so that the people leaving there are able to
+        carry their furniture in. Sometimes the houses are not perfectly aligned—this
+        makes them look funny.
 
   = render 'one_picture', locals: { picture_url: image_url('image-21-1200.jpg', image_path) }
-  
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-22-1200.jpg', image_path), image_url('image-23-1200.jpg', image_path) ] }
-
-
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-24-1200.jpg', image_path), image_url('image-25-1200.jpg', image_path) ] }
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-26-1200.jpg', image_path), image_url('image-27-1200.jpg', image_path) ] }
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-28-1200.jpg', image_path), image_url('image-29-1200.jpg', image_path) ] }
-
   = render 'one_picture', locals: { picture_url: image_url('image-30-1200.jpg', image_path) }
   = render 'two_pictures', locals: { picture_urls: [ image_url('image-31-1200.jpg', image_path), image_url('image-32-1200.jpg', image_path) ] }
   
@@ -101,9 +96,10 @@
       p Did I miss anything? "Yes, sure, you did't say anything about the nightlife!"—someone
         screams from the back. And I immediately answer: "I don't have any photos of that, as
         what happens in Amsterdam... you know... But trust me, it's great!"
+
       p I can only share that during the day, you can enjoy the good weather on one of the banks
-        of one of the may canals, together with somebody you love. Just relax and let the sun do its job!
-        
+        of one of the may canals, together with somebody you love. Relax and let the sun do its job!
         
   = render 'one_picture', locals: { picture_url: image_url('image-33-1200.jpg', image_path) }
   = render 'one_picture', locals: { picture_url: image_url('image-34-1200.jpg', image_path) }
+  = render 'one_picture', locals: { picture_url: image_url('image-35-1200.jpg', image_path) }
