@@ -42,6 +42,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'therubyracer'
+  gem 'rdoc', '4.2.0'
 end
 
 # bundle exec rake doc:rails generates the API under doc/api.
