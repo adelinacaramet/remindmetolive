@@ -9,6 +9,9 @@ docker-push:
 docker-pull:
 	docker pull danpersa/remindmetolive:latest
 
+docker-run:
+	docker run -p 3000:80 -t danpersa/remindmetolive:latest
+
 ssh:
 	ssh  188.166.88.49 -l root
 
